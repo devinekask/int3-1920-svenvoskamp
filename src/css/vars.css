@@ -1,0 +1,6 @@
+:root {
+
+  @custom-media --mobile (max-width: 37.5rem);
+  @custom-media --tablet (max-width: 83.5rem);
+  @custom-media --macbook (max-width: 144rem);
+}
