@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # INT3 Webshop + Longread
 
 ## De opdracht
