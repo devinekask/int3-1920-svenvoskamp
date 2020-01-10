@@ -25,10 +25,15 @@ li {
   list-style-type: none;
 }
 
-.container {
+.container,
+.container__dashed {
   max-width: 96rem;
   vertical-align: center;
   margin: 0 auto;
+}
+
+.container__dashed {
+  overflow: hidden;
 }
 
 .hidden {

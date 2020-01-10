@@ -3,13 +3,20 @@ body {
 }
 
 p,
-li {
+li,
+h1,
+h2,
+.button__spotlight {
   color: black;
   font-size: var(--fontSizeMedium);
 }
 .li__nav--right,
 .li__nav--left,
-.li__nav--main {
+.li__nav--main,
+h2,
+.p__spotlight--header,
+.p__spotlight--title,
+.button__spotlight {
   text-transform: uppercase;
 }
 .li__nav--right,
@@ -18,6 +25,26 @@ li {
 }
 
 .li__nav--right,
-.li__nav--main {
+.li__nav--main,
+h2,
+.p__spotlight--header,
+.p__spotlight--title,
+.p__spotlight--explained,
+.button__spotlight {
   font-weight: var(--fontWeightBold);
+}
+
+h2,
+.p__spotlight--header,
+.p__spotlight--title,
+.p__spotlight--explained {
+  color: white;
+}
+
+.p__spotlight--title {
+  font-size: var(--fontSizeBig);
+}
+
+.p__spotlight--explained {
+  font-size: var(--fontSizeSmall);
 }

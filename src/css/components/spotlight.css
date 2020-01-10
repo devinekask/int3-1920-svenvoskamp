@@ -5,6 +5,67 @@
 
 .section__spotlight--main {
   background-image: url("../../assets/img/spotlight_desktop.png");
-  widht: 100%;
+  width: 100%;
   height: 40rem;
+}
+
+.spotlight__textcontent {
+  margin-top: 3rem;
+  margin-left: 3.5rem;
+}
+
+.p__spotlight--header {
+  margin-bottom: 3rem;
+}
+
+.h2__background--red {
+  background-color: var(--mainRed);
+  padding: 0.8rem 3rem;
+}
+
+.h2__spotlight {
+  display: inline-block;
+  padding-top: 4rem;
+  margin-left: 3.5rem;
+}
+
+.h2__spotlight > span {
+  position: relative;
+  display: inline-block;
+}
+
+.h2__spotlight > span::before,
+.h2__spotlight > span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  border-bottom: 1px dashed;
+  width: 96rem;
+  margin: 0 auto;
+  vertical-align: center;
+}
+
+.h2__spotlight > span::before {
+  right: 100%;
+}
+
+.h2__spotlight > span:after {
+  left: 100%;
+}
+
+.spotlight__explained {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12rem;
+}
+
+.p__spotlight--explained {
+  margin-left: 3.5rem;
+  width: 39rem;
+}
+
+.button__spotlight {
+  margin-right: 3.5rem;
+  background-color: var(--mainYellow);
+  padding: 0.8rem 3rem;
 }
