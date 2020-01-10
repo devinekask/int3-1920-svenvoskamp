@@ -1,12 +1,6 @@
 @import './css/reset.css';
 @import './css/vars.css';
 @import './css/typography.css';
-@import './css/components/main.css';
-@import './css/components/header.css';
-@import './css/components/footer.css';
-@import './css/components/overview.css';
-@import './css/components/cities.css';
-@import './css/components/crawls.css';
 
 html {
   box-sizing: border-box;

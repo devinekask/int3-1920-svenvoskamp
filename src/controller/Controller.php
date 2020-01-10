@@ -7,6 +7,10 @@ class Controller {
   protected $env = 'development';
 
   public function filter() {
+    setlocale(LC_ALL, 'nl_BE');
+    if(!isset($_SESSION['cart'])) {
+      $_SESSION['cart'] = array();
+    }
     if (basename(dirname(dirname(__FILE__))) != 'src') {
       $this->env = 'production';
     }
