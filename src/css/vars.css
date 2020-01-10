@@ -1,6 +1,26 @@
 :root {
-
-  @custom-media --mobile (max-width: 37.5rem);
-  @custom-media --tablet (max-width: 83.5rem);
-  @custom-media --macbook (max-width: 144rem);
+  --fontSizeVeryBig: 2.4rem;
+  --fontSizeBig: 2rem;
+  --fontSizeMedium: 1.8rem;
+  --fontSizeSmall: 1.6rem;
+  --fontSizeVerySmall: 1.4rem;
+  --fontSizeTiny: 1.2rem;
+  --fontWeightLight: 300;
+  --fontWeightNormal: 400;
+  --fontWeightBold: bold;
+  --fontWeightBlack: 900;
+  --mainRed: #d93125;
+  --mainYellow: #fbe34e;
+  --mainGrey: #f8f8f5;
+  --mainGreen: #8ac926;
+  --tinyMargin: 4rem;
+  --verySmallMargin: 8rem;
+  --smallMargin: 10rem;
+  --mediumMargin: 20rem;
+  --bigMargin: 30rem;
+  --veryBigMargin: 40rem;
 }
+
+@custom-media --mobile (max-width: 37.5rem);
+@custom-media --tablet (max-width: 83.5rem);
+@custom-media --macbook (max-width: 144rem);

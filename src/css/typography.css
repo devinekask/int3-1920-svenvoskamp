@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p,
+li {
+  color: black;
+  font-size: var(--fontSizeMedium);
+}
+.li__nav--right,
+.li__nav--left,
+.li__nav--main {
+  text-transform: uppercase;
+}
+.li__nav--right,
+.li__nav--left {
+  font-size: var(--fontSizeTiny);
+}
+
+.li__nav--right,
+.li__nav--main {
+  font-weight: var(--fontWeightBold);
+}

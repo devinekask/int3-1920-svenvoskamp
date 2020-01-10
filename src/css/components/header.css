@@ -1,0 +1,58 @@
+.nav__top,
+.nav__top--left,
+.nav__top--right,
+.nav__main--flex {
+  display: flex;
+}
+
+.nav__top,
+.nav__main--flex {
+  justify-content: space-between;
+}
+
+.nav__top {
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+
+.li__nav--left {
+  margin-right: 2rem;
+}
+
+.li__nav--right {
+  margin-left: 2rem;
+}
+
+.li__nav--main,
+.img__nav--main,
+.ing__nav--main {
+  margin-left: 3.2rem;
+}
+
+.li__nav--main {
+  padding-top: 2.6rem;
+}
+
+.img__nav--search {
+  margin-top: 2.2rem;
+}
+
+.span__nav--background {
+  background-color: var(--mainRed);
+  padding: 1.4rem 2rem;
+  color: white;
+}
+
+.span__main--background {
+  background-color: white;
+  color: var(--mainRed);
+  padding: 2.6rem 2.4rem;
+}
+
+.span__nav--red {
+  color: #df534a;
+}
+
+.nav__main {
+  background-color: var(--mainGrey);
+}
