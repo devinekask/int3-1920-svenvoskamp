@@ -4,6 +4,7 @@
 @import "./css/components/header.css";
 @import "./css/components/spotlight.css";
 @import "./css/components/filter.css";
+@import "./css/components/products.css";
 
 html {
   box-sizing: border-box;

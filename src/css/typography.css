@@ -11,6 +11,11 @@ h2,
   color: black;
   font-size: var(--fontSizeMedium);
 }
+
+.medium {
+  font-size: var(--fontSizeMedium);
+}
+
 .li__nav--right,
 .li__nav--left,
 .li__nav--main,
@@ -18,11 +23,13 @@ h2,
 .p__spotlight--header,
 .p__spotlight--title,
 .button__spotlight,
-.p__checkbox {
+.p__checkbox,
+.uppercase {
   text-transform: uppercase;
 }
 .li__nav--right,
-.li__nav--left {
+.li__nav--left,
+.tiny {
   font-size: var(--fontSizeTiny);
 }
 
@@ -34,14 +41,16 @@ h2,
 .p__spotlight--explained,
 .button__spotlight,
 .button__filter,
-.p__checkbox {
+.p__checkbox,
+.bold {
   font-weight: var(--fontWeightBold);
 }
 
 h2,
 .p__spotlight--header,
 .p__spotlight--title,
-.p__spotlight--explained {
+.p__spotlight--explained,
+.white {
   color: white;
 }
 
@@ -53,6 +62,11 @@ h2,
   font-size: var(--fontSizeSmall);
 }
 
-.p__checkbox {
+.p__checkbox,
+.verysmall {
   font-size: var(--fontSizeVerySmall);
+}
+
+.red {
+  color: var(--mainRed);
 }

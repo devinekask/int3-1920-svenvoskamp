@@ -73,3 +73,21 @@
 button {
   border: none;
 }
+
+@media (--mobile) {
+  .spotlight__explained {
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+  .button__spotlight {
+    margin-top: 4rem;
+    padding: 0.8rem 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  .section__spotlight--main {
+    background-image: url("../../assets/img/spotlight_mobile.png");
+    background-repeat: no-repeat;
+    width: 100vw;
+  }
+}

@@ -18,7 +18,7 @@
     <h2 class = "hidden">Filter</h2>
       <div class = "container section__filter--main">
         <form id="form__filter" method="get" action="index.php">
-          <input type="hidden" name="page" value="products">
+          <input type="hidden" name="page" value="home">
             <div class="form__wrap">
               <div class="checkbox__wrap">
                 <label class="checkbox">
@@ -43,9 +43,32 @@
         </form>
       </div>
     </div>
-  <hr class = "grey__line">
+  <hr class = "grey__line grey__line--2">
 </section>
 
 <section class = " container container__dashed section__products">
-  <h2 class = "h2__spotlight h2__products"><span class = "h2__background--red">Producten</span></h2>
+  <h2 class = "h2__spotlight h2__products"><span class = "h2__background--red h2__background--padding">Producten</span></h2>
+    <ul class = "ul__products">
+      <?php foreach ($products as $product): if (strlen($product['title']) > 24) $product['title'] = substr($product['title'], 0, 21) . '...'; ?>
+      <li class = "li__product">
+        <div class = "li__product--info">
+          <a href="">
+          <img src="<?php echo $product['product_image'];?>" alt="<?php echo $product['title'];?>">
+          <p class = "p__product--type tiny uppercase red"><?php echo $product['type'];?></p>
+          <p class = "p__product--title verysmall uppercase bold"><?php echo $product['title'];?></p>
+          <p class = "p__product--price red bold uppercase medium ">€<?php echo $product['price'];?></p>
+          </a>
+        </div>
+        <div class = "li__product--link">
+          <a href=""><img class = "img__cart" src="./assets/img/cart.png" alt="cart"></a>
+          <a href="">
+            <div class = "li__product--more">
+              <p class = "p__product--more tiny ">&rarr; meer info</p>
+            </div>
+          </a>
+          </div>
+        </div>
+      </li>
+      <?php endforeach;?>
+    </ul>
 </section>

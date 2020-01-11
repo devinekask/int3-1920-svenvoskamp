@@ -2,6 +2,10 @@
   border: solid 0.2rem var(--mainGrey);
 }
 
+.grey__line--2 {
+  margin-top: 1.7rem;
+}
+
 .section__filter {
   margin-top: 1.2rem;
 }
@@ -12,8 +16,14 @@
   display: flex;
 }
 
+@media (--mobile) {
+  .checkbox__wrap {
+    flex-direction: column;
+  }
+}
+
 .checkbox {
-  margin-left: 3rem;
+  margin-left: 3.5rem;
   margin-top: 1.2rem;
 }
 

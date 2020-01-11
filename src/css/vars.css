@@ -21,6 +21,7 @@
   --veryBigMargin: 40rem;
 }
 
-@custom-media --mobile (max-width: 37.5rem);
-@custom-media --tablet (max-width: 83.5rem);
-@custom-media --macbook (max-width: 144rem);
+@custom-media --mobile (max-width: 480px);
+@custom-media --menu (max-width: 600px);
+@custom-media --tablet (max-width: 980px);
+@custom-media --macbook (max-width: 1690px);
