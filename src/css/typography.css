@@ -6,7 +6,8 @@ p,
 li,
 h1,
 h2,
-.button__spotlight {
+.button__spotlight,
+.button__filter {
   color: black;
   font-size: var(--fontSizeMedium);
 }
@@ -16,7 +17,8 @@ h2,
 h2,
 .p__spotlight--header,
 .p__spotlight--title,
-.button__spotlight {
+.button__spotlight,
+.p__checkbox {
   text-transform: uppercase;
 }
 .li__nav--right,
@@ -30,7 +32,9 @@ h2,
 .p__spotlight--header,
 .p__spotlight--title,
 .p__spotlight--explained,
-.button__spotlight {
+.button__spotlight,
+.button__filter,
+.p__checkbox {
   font-weight: var(--fontWeightBold);
 }
 
@@ -47,4 +51,8 @@ h2,
 
 .p__spotlight--explained {
   font-size: var(--fontSizeSmall);
+}
+
+.p__checkbox {
+  font-size: var(--fontSizeVerySmall);
 }

@@ -39,7 +39,7 @@
   content: "";
   position: absolute;
   top: 50%;
-  border-bottom: 1px dashed;
+  border-bottom: 1px dashed white;
   width: 96rem;
   margin: 0 auto;
   vertical-align: center;
@@ -68,4 +68,8 @@
   margin-right: 3.5rem;
   background-color: var(--mainYellow);
   padding: 0.8rem 3rem;
+}
+
+button {
+  border: none;
 }

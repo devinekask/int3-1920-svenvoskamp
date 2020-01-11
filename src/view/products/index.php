@@ -12,3 +12,40 @@
       </div>
   </div>
 </section>
+
+<section class = "section__filter">
+  <hr class = "grey__line">
+    <h2 class = "hidden">Filter</h2>
+      <div class = "container section__filter--main">
+        <form id="form__filter" method="get" action="index.php">
+          <input type="hidden" name="page" value="products">
+            <div class="form__wrap">
+              <div class="checkbox__wrap">
+                <label class="checkbox">
+                    <input class = "input__checkbox" type="checkbox" name="type[]" value="1"
+                        <?php if(isset($_GET['type'])){ if (!empty($_GET['type'][0] == 1)){ echo 'checked';}}?>>
+                    <p class = "p__checkbox">Boeken</p>
+                </label>
+                <label class="checkbox">
+                    <input class = "input__checkbox" type="checkbox" name="type[]" value="2"
+                        <?php if(isset($_GET['type'])){ if (!empty($_GET['type'][0] == 2)){ echo 'checked';}}?>>
+                    <p class = "p__checkbox">Accesoires</p>
+                </label>
+                <label class="checkbox">
+                    <input class = "input__checkbox" type="checkbox" name="type[]" value="3"
+                        <?php if(isset($_GET['type'])){ if (!empty($_GET['type'][0] == 3)){ echo 'checked';}}?>>
+                    <p class = "p__checkbox">Abonnement</p>
+                </label>
+            </div>
+            <div class="submit__wrap">
+              <input type="submit" value="FILTER" class="button__filter">
+            </div>
+        </form>
+      </div>
+    </div>
+  <hr class = "grey__line">
+</section>
+
+<section class = " container container__dashed section__products">
+  <h2 class = "h2__spotlight h2__products"><span class = "h2__background--red">Producten</span></h2>
+</section>
