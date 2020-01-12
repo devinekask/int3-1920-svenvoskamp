@@ -54,7 +54,7 @@ class ProductDAO extends DAO {
   }
 
   public function selectProductsByTypeId($type_id, $id){
-    $sql = "SELECT * FROM `products` INNER JOIN `types` ON `types`.`id` = `products`.`type_id` WHERE `type_id` = :type_id AND `products`.`id` != 11 AND `products`.`id` != 17 AND  `products`.`id` != :id ORDER BY rand() limit 3";
+    $sql = "SELECT `products`.*, `types`.`type` FROM `products` INNER JOIN `types` ON `types`.`id` = `products`.`type_id` WHERE `type_id` = :type_id AND `products`.`id` != 11 AND `products`.`id` != 17 AND  `products`.`id` != :id ORDER BY rand() limit 3";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id', $id);
     $stmt->bindValue(':type_id', $type_id);
