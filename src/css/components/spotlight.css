@@ -79,8 +79,11 @@ button {
     flex-direction: column;
     margin-top: 6rem;
   }
+  .p__spotlight--explained {
+    width: 27rem;
+  }
   .button__spotlight {
-    margin-top: 4rem;
+    margin-top: 2.5rem;
     padding: 0.8rem 0rem;
     margin-left: 0rem;
     margin-right: 0rem;

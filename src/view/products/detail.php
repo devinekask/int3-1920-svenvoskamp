@@ -1,0 +1,84 @@
+<section class = "container section__product--detail">
+  <h2 class = "hidden">Product Detail</h2>
+  <div class = "div__product--title">
+    <p class = "uppercase bold big p__product--title"><?php echo $product['title'];?></p>
+    <img class = "img__product--detail" src="<?php echo $product['product_detail_image'];?>" alt="<?php echo $product['title'];?>">
+  </div>
+  <div class = "div__product--info">
+    <form method="post" action="index.php?page=cart">
+      <div class = "div__product--input">
+        <?php foreach ($allproducts as $allproduct): ?>
+        <?php if(isset ($allproduct['bookclass'])) :?>
+        <input type="radio" <?php if($allproduct['bookclass'] == 'Paperback'){ echo 'checked';}; ?> id = "radio<?php echo $allproduct['id'];?>" name="product_id" value="<?php echo $allproduct['id'];?>"/>
+        <label class = "uppercase medium label__radio"  for="radio<?php echo $allproduct['id'];?>"><?php echo $allproduct['bookclass'];?> <br> €<?php echo $allproduct['price'];?></label>
+        <?php elseif(isset ($allproduct['color'])) :?>
+        <input type="radio" <?php if($allproduct['color'] == 'blauw'){ echo 'checked';}; ?> id = "radio<?php echo $allproduct['id'];?>" name="product_id" value="<?php echo $allproduct['id'];?>"/>
+        <label class = "<?php echo $allproduct['color'];?> uppercase medium label__radio"  for="radio<?php echo $allproduct['id'];?>"><?php echo $allproduct['color'];?> <br> €<?php echo $allproduct['price'];?></label>
+        <?php elseif(isset ($allproduct['month'])) :?>
+        <input type="radio" <?php if($allproduct['month'] == '36 Maanden'){ echo 'checked';}; ?> id = "radio<?php echo $allproduct['id'];?>" name="product_id" value="<?php echo $allproduct['id'];?>"/>
+        <label class = "uppercase medium label__radio"  for="radio<?php echo $allproduct['id'];?>"><?php echo $allproduct['month'];?> <br> €<?php echo $allproduct['price'];?></label>
+        <?php else :?>
+        <input type="radio" checked  id = "radio<?php echo $allproduct['id'];?>" name="product_id" value="<?php echo $allproduct['id'];?>"/>
+        <label class = "uppercase medium label__radio"  for="radio<?php echo $allproduct['id'];?>">€<?php echo $allproduct['price'];?></label>
+        <?php endif;?>
+        <?php endforeach; ?>
+      </div>
+      <ul class = "ul__product--benefits">
+        <li class = " li__product--benefit"><img class = "img__product--benefit" src="./assets/img/check.png" alt="check icon"><p class = "verysmall p__product--benefit"> voor <span class = "bold span__green">23,59uur besteld</span>, morgen in huis!</p>
+        </li>
+        <li class = " li__product--benefit"><img class = "img__product--benefit" src="./assets/img/check.png" alt="check icon"><p class = "verysmall p__product--benefit"><span class = " bold span__green">gratis</span> retourneren binnen 30 dagen!</p>
+        </li>
+        <li class = " li__product--benefit"><img class = "img__product--benefit" src="./assets/img/check.png" alt="check icon"><p class = "verysmall p__product--benefit"><span class = " bold span__green">altijd</span> de laagste prijs</p>
+        </li>
+      </ul>
+
+      <button class = " button__spotlight button__product--detail" type = "submit" name = "action" value = "add"><img class ="img__button--detail" src="./assets/img/cart.png" alt="cart icon"><p class = "p__button--detail">IN WINKELMAND</p></button>
+      <?php if ($product['id'] >= 1 && $product['id'] <= 10): ?>
+      <button class = " button__spotlight button__product--detail button__product--discover"><p class = "p__button--detail">ONTDEK</p></button>
+      <?php endif;?>
+    </form>
+  </div>
+</section>
+
+<div class = "container section__flex">
+  <section class = "container container__dashed section__product--info">
+    <h2 class = "h2__product__info h2__spotlight h2__products"><span class = "h2__background--red h2__background--padding">Productinformatie</span></h2>
+    <p class = "p__product--info"><?php echo $product['information'];?></p>
+  </section>
+
+  <section class = "container container__dashed section__product--specs">
+    <h2 class = "h2__product--specs h2__spotlight h2__products"><span class = "h2__background--red h2__background--padding">Specificaties</span></h2>
+    <ul class = "ul__product--specs">
+      <?php foreach ($specs as $spec) :?>
+      <li class = "li__product--specs"><?php echo $spec['spec'];?></li>
+      <?php endforeach;?>
+    </ul>
+  </section>
+</div>
+
+<section class = " container container__dashed section__products">
+  <h2 class = "h2__spotlight h2__products"><span class = "h2__background--red h2__background--padding">Relevante Producten</span></h2>
+    <ul class = "ul__products">
+      <?php foreach ($relatedproducts as $relatedproduct): if (strlen($relatedproduct['title']) > 24) $product['title'] = substr($product['title'], 0, 21) . '...'; ?>
+      <li class = "li__product">
+        <div class = "li__product--info">
+          <a href="index.php?page=product-detail&amp;id=<?php echo $relatedproduct['id'];?>&amp;type=<?php echo $product['type_id']?>">
+          <img src="<?php echo $relatedproduct['product_image'];?>" alt="<?php echo $relatedproduct['title'];?>">
+          <p class = "p__product--type tiny uppercase red"><?php echo $relatedproduct['type'];?></p>
+          <p class = "p__product--title verysmall uppercase bold"><?php echo $relatedproduct['title'];?></p>
+          <p class = "p__product--price red bold uppercase medium ">€<?php echo $relatedproduct['price'];?></p>
+          </a>
+        </div>
+        <div class = "li__product--link">
+          <a href=""><img class = "img__cart" src="./assets/img/cart.png" alt="cart"></a>
+          <a href="index.php?page=product-detail&amp;id=<?php echo $relatedproduct['id'];?>&amp;type=<?php echo $relatedproduct['type_id']?>">
+            <div class = "li__product--more">
+              <p class = "p__product--more tiny ">&rarr; meer info</p>
+            </div>
+          </a>
+          </div>
+        </div>
+      </li>
+      <?php endforeach;?>
+    </ul>
+</section>

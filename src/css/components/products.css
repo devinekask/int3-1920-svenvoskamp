@@ -55,7 +55,7 @@
   }
 }
 
-@media (--mobile) {
+@media (--menu) {
   .ul__products {
     grid-template-columns: 1fr;
   }

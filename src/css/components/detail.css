@@ -1,0 +1,155 @@
+.section__product--detail {
+  padding-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.div__product--title {
+  margin-left: 3.5rem;
+}
+
+.img__product--detail {
+  margin-top: 3rem;
+}
+
+.div__product--info {
+  margin-right: 3.5rem;
+  margin-top: 5.7rem;
+}
+
+input[type="radio"] {
+  opacity: 0;
+}
+
+.label__radio {
+  display: inline-block;
+  background-color: var(--mainRed);
+  color: white;
+  padding: 1.2rem 1.6rem;
+  opacity: 0.3;
+  border-radius: 1rem;
+}
+
+input[type="radio"]:checked + .label__radio {
+  background-color: var(--mainRed);
+  opacity: 1;
+}
+
+input[type="radio"]:checked + .groen {
+  background-color: var(--mainGreen);
+  opacity: 1;
+}
+
+input[type="radio"]:checked + .blauw {
+  background-color: #0097e6;
+  opacity: 1;
+}
+
+input[type="radio"]:checked + .wit {
+  background-color: white;
+  opacity: 1;
+}
+
+input[type="radio"]:checked + .zwart {
+  background-color: black;
+  opacity: 1;
+}
+
+.blauw {
+  background-color: #0097e6;
+}
+
+.wit {
+  border: 0.1rem solid black;
+  color: black;
+  background-color: white;
+}
+
+.zwart {
+  background-color: black;
+}
+
+.groen {
+  background-color: var(--mainGreen);
+}
+
+.ul__product--benefits {
+  margin-left: 2rem;
+  margin-top: 3.5rem;
+}
+
+.li__product--benefit {
+  margin-top: 1.5rem;
+  display: flex;
+}
+
+.p__product--benefit {
+  margin-left: 1rem;
+}
+
+.button__product--detail {
+  margin-right: 0rem;
+  font-weight: 400;
+  display: flex;
+  margin-top: 4rem;
+  margin-left: 2rem;
+}
+
+.button__product--discover {
+  background-color: white;
+  border: 0.1rem solid var(--mainYellow);
+  margin-top: 1.5rem;
+}
+
+.img__button--detail {
+  margin-right: 1rem;
+  margin-top: 0.1rem;
+}
+
+.p__product--info {
+  margin-left: 3.5rem;
+  width: 55rem;
+  line-height: 2.3rem;
+}
+
+.section__flex {
+  display: flex;
+}
+
+.section__product--info {
+  padding-right: 10rem;
+}
+
+.section__product--specs {
+  padding-right: 6rem;
+}
+
+.ul__product--specs {
+  margin-left: 3.5rem;
+  margin-top: -1.8rem;
+}
+
+.li__product--specs {
+  margin-top: 2rem;
+}
+
+@media (--tablet) {
+  .section__flex {
+    display: block;
+  }
+}
+
+@media (--menu) {
+  .section__product--detail {
+    display: block;
+  }
+  .button__product--detail {
+    padding: 0.8rem 6rem;
+  }
+  .div__product--info {
+    margin-left: 1.5rem;
+  }
+  .p__product--info {
+    width: 30rem;
+  }
+}

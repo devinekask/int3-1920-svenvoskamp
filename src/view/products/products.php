@@ -52,7 +52,7 @@
       <?php foreach ($products as $product): if (strlen($product['title']) > 24) $product['title'] = substr($product['title'], 0, 21) . '...'; ?>
       <li class = "li__product">
         <div class = "li__product--info">
-          <a href="">
+          <a href="index.php?page=product-detail&amp;id=<?php echo $product['id'];?>&amp;type=<?php echo $product['type_id']?>">
           <img src="<?php echo $product['product_image'];?>" alt="<?php echo $product['title'];?>">
           <p class = "p__product--type tiny uppercase red"><?php echo $product['type'];?></p>
           <p class = "p__product--title verysmall uppercase bold"><?php echo $product['title'];?></p>
@@ -61,7 +61,7 @@
         </div>
         <div class = "li__product--link">
           <a href=""><img class = "img__cart" src="./assets/img/cart.png" alt="cart"></a>
-          <a href="">
+          <a href="index.php?page=product-detail&amp;id=<?php echo $product['id'];?>&amp;type=<?php echo $product['type_id']?>">
             <div class = "li__product--more">
               <p class = "p__product--more tiny ">&rarr; meer info</p>
             </div>

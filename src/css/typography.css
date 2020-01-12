@@ -54,11 +54,13 @@ h2,
   color: white;
 }
 
-.p__spotlight--title {
+.p__spotlight--title,
+.big {
   font-size: var(--fontSizeBig);
 }
 
-.p__spotlight--explained {
+.p__spotlight--explained,
+.small {
   font-size: var(--fontSizeSmall);
 }
 
@@ -69,4 +71,8 @@ h2,
 
 .red {
   color: var(--mainRed);
+}
+
+.span__green {
+  color: var(--mainGreen);
 }
