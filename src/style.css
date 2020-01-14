@@ -7,6 +7,7 @@
 @import "./css/components/products.css";
 @import "./css/components/detail.css";
 @import "./css/components/cart.css";
+@import "./css/components/cart-detail.css";
 
 html {
   box-sizing: border-box;
@@ -19,6 +20,10 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+*:focus {
+  outline: 2px solid #d71ef7;
 }
 
 a {

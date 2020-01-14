@@ -86,6 +86,7 @@
         <?php } else { ?>
         <p class = "span__green small uppercase bold  p__total--amount"><?php echo $delevering;?></p>
         <?php } ?>
+        <input type="hidden" name="delivery" value=<?php echo $delevering;?>>
       </div>
       <div class = "flex div__recipe--bottom">
         <p class = "medium uppercase bold p__bottom--text">Totaal:</p>

@@ -3,6 +3,7 @@
 require_once __DIR__ . '/Controller.php';
 require_once __DIR__ . '/../dao/ProductDAO.php';
 require_once __DIR__ . '/../dao/OrderDAO.php';
+require_once __DIR__ . '/../dao/CustomerDAO.php';
 
 
 
@@ -10,10 +11,12 @@ class OrdersController extends Controller {
 
   private $productDAO;
   private $orderDAO;
+  private $customerDAO;
 
   function __construct() {
     $this->productDAO = new ProductDAO();
     $this->orderDAO = new OrderDAO();
+    $this->customerDAO = new CustomerDAO();
   }
 
   public function cart() {
@@ -96,6 +99,7 @@ class OrdersController extends Controller {
       private function _handleDetails() {
         header('Location: index.php?page=cart-detail');
         $_SESSION['order'] = true;
+        $_SESSION['delivery'] = $_POST['delivery'];
         exit();
       }
 
@@ -140,5 +144,58 @@ class OrdersController extends Controller {
         }
       }
       public function detail() {
+
+        if(!empty($_POST['action'])){
+          if($_POST['action'] == 'insertCustomer'){
+            $dataC= array(
+              'name' => $_POST['name'],
+              'surname' => $_POST['surname'],
+              'email' => $_POST['email'],
+              'telephone' => $_POST['telephone'],
+              'adres' => $_POST['adres'],
+              'number' => $_POST['number'],
+              'zip' => $_POST['zip'],
+              'fname' => $_POST['fname'],
+              'fsurname' => $_POST['fsurname'],
+              'fadres' => $_POST['fadres'],
+              'fnumber' => $_POST['fnumber'],
+              'fzip' => $_POST['fzip']
+            );
+            $insertedCustomer = $this->customerDAO->insertCustomer($dataC);
+            if(!$insertedCustomer){
+              $errors = $this->customerDAO->validate($dataC);
+              $this->set('errors',$errors);
+            }
+          }
+        }
+
+      $delivery = $_SESSION['delivery'];
+      $this->set('delivery', $delivery);
+
+      $lastOrderId = $this->orderDAO->selectLastOrder();
+      $this->set('lastOrderId', $lastOrderId);
+
+      $lastUserId = $this->customerDAO->selectLastCustomer();
+      $this->set('lastUserId', $lastUserId);
+
+      $orderItems = $this->orderDAO->selectCartItemByOrderId($lastOrderId['max']);
+      $this->set('orderItems', $orderItems);
+
+      if(!empty($_POST['action'])){
+        if($_POST['action'] == 'insertCustomer'){
+          $dataD= array(
+            'customer_id' => $lastUserId['max'],
+            'status' => "Waiting for payment",
+            'id' => $lastOrderId['max']
+          );
+          $updatedOrder = $this->orderDAO->updateOrder($dataD);
+          if(!$updatedOrder){
+            $errors = $this->orderDAO->validateD($dataD);
+            $this->set('errors',$errors);
+          }
+        }
+      }
+
       }
     }
+

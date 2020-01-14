@@ -20,6 +20,18 @@ class OrderDAO extends DAO {
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
+  public function updateOrder($dataD){
+    $sql = "UPDATE `orders`
+    SET `customer_id` = :customer_id, `status` = :status
+    WHERE `id` = :id";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':customer_id', $dataD['customer_id']);
+    $stmt->bindValue(':status', $dataD['status']);
+    $stmt->bindValue(':id', $dataD['id']);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
   public function insertOrder($data){
     $errors = $this->validate( $data );
       if (empty($errors)) {
@@ -59,7 +71,18 @@ class OrderDAO extends DAO {
     return false;
   }
 
-
+  public function selectCartItemByOrderId($order_id){
+    $sql = "SELECT * FROM `cart_items`
+    INNER JOIN `orders`
+    ON `orders`.`id` = `cart_items`.`order_id`
+    INNER JOIN `products_all`
+    ON `products_all`.`id` = `cart_items`.`product_id`
+    WHERE `order_id` = :order_id";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':order_id', $order_id);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
 
   public function validate($data){
     $errors = [];
@@ -82,6 +105,20 @@ class OrderDAO extends DAO {
         }
         if (empty($dataB['quantity'])) {
             $errors['quantity'] = 'quantity is required';
+        }
+        return $errors;
+      }
+
+    public function validateD($dataD){
+      $errors = [];
+        if (empty($dataD['id'])) {
+          $errors['id'] = 'id is required';
+        }
+        if (empty($dataD['status'])) {
+          $errors['status'] = 'status is required';
+        }
+        if (empty($dataD['customer_id'])) {
+          $errors['customer_id'] = 'customer_id is required';
         }
         return $errors;
       }

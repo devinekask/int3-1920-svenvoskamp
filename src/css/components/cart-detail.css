@@ -1,0 +1,105 @@
+.field--wrapper__label {
+  padding-bottom: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.field--wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.field--wrapper__adress {
+  display: flex;
+  justify-content: space-between;
+  width: 35rem;
+}
+
+.fields {
+  margin-top: 3rem;
+  margin-left: 3.5rem;
+}
+
+.field--wrapper__label > input {
+  width: 20rem;
+  height: 3rem;
+  border: 0.1rem solid black;
+  font-size: var(--fontSizeVerySmall);
+  padding-left: 0.5rem;
+}
+
+.field--wrapper__fadress {
+  display: none;
+  background-color: var(--mainGrey);
+  width: 50rem;
+  padding-top: 1rem;
+  margin-top: 1.6rem;
+}
+
+.input__cart--toggle {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid black;
+  height: 1rem;
+  width: 1rem;
+  margin-bottom: 0.1rem;
+}
+
+.label__cart--toggle {
+  margin-bottom: -1rem;
+}
+
+.input__cart--toggle:checked {
+  background-color: var(--mainRed);
+}
+
+input[type="checkbox"]:checked + label + .field--wrapper__fadress {
+  display: block;
+}
+
+.field--wrapper__label > .input__cart--number {
+  width: 5rem;
+}
+
+.field--wrapper__label > .input__cart--zip {
+  width: 7rem;
+}
+
+.button__cart--details {
+  margin-left: 3.5rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.div__cartdetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p__cartdetail--right {
+  margin-right: 3.5rem;
+}
+
+.div__recipe--details-bottom {
+  border-top: none;
+  padding-bottom: 2rem;
+  padding-top: 0rem;
+}
+
+.div__details--recipe-discount {
+  margin-top: 1.6rem;
+}
+
+.div__details--recipe {
+  height: auto;
+}
+
+.div__details--recipe-basic {
+  margin-top: 1.6rem;
+  line-height: 2.2rem;
+}
+
+.error {
+  font-size: var(--fontSizeTiny);
+  color: var(--mainRed);
+  margin-top: 0.5rem;
+}
