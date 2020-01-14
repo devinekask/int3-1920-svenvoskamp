@@ -20,7 +20,7 @@
             <li class = "li__nav--right"><span class = span__nav--red>Nu in HUMO</span></li>
             <li class = "li__nav--right">Login</li>
             <li class = "li__nav--right">Registreer</li>
-            <li class = "li__nav--right">Winkelmand (<span class = span__nav--red>1</span>)</li>
+            <li class = "li__nav--right"><a href = "index.php?page=cart">Winkelmand</a> (<span class = span__nav--red><?php echo $numItems;?></span>)</li>
           </div>
         </div>
         <div class="nav__main">
@@ -32,7 +32,7 @@
             <img class = "img__nav--main" src="../assets/img/logo.png" alt="Humo logo">
             <li class = "li__nav--main">Muziek</li>
             <li class = "li__nav--main">Boeken</li>
-            <li class = "li__nav--main"><span class = "span__main--background">Shop</span></li>
+            <li class = "li__nav--main"><span class = "span__main--background"><a href = "index.php?page=products">Shop</a></span></li>
             <img width = "24" height = "24" class = "img__nav--main img__nav--search" src="../assets/img/search.png" alt="Search Icon">
           </div>
         </div>
@@ -47,7 +47,7 @@
             <li class = "li__nav--right"><span class = span__nav--red>Nu in HUMO</span></li>
             <li class = "li__nav--right">Login</li>
             <li class = "li__nav--right">Registreer</li>
-            <li class = "li__nav--right">Winkelmand (<span class = span__nav--red>1</span>)</li>
+            <li class = "li__nav--right">Winkelmand (<span class = span__nav--red><?php echo $numItems;?></span>)</li>
           </div>
         </div>
         <div class="nav__main">
@@ -73,10 +73,11 @@
             <img class = "img__mobile--right" width = "24" height = "24"  src="../assets/img/user.png" alt="Hamburger Icon">
             <div class = "nav__right--cart">
                 <img width = "24" height = "24"  src="../assets/img/cart24x24.png" alt="Shopping cart">
-                <li class = "li__nav--right">(<span class = span__nav--red>1</span>)</li>
+                <li class = "li__nav--right">(<span class = span__nav--red><?php echo $numItems;?></span>)</li>
             </div>
           </div>
         </div>
+        <hr class = "grey__line grey__line--nav">
       </nav>
       </header>
     <main>

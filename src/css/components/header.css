@@ -65,6 +65,10 @@
   display: none;
 }
 
+.grey__line--nav {
+  margin-top: 5rem;
+}
+
 @media (--tablet) {
   .nav__desktop {
     display: none;
@@ -117,5 +121,8 @@
   }
   .img__mobile--left {
     margin-left: 2rem;
+  }
+  .grey__line--nav {
+    margin-top: -1.7rem;
   }
 }

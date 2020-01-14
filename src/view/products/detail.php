@@ -1,3 +1,4 @@
+<hr class = "grey__line grey__line--nav">
 <section class = "container section__product--detail">
   <h2 class = "hidden">Product Detail</h2>
   <div class = "div__product--title">
@@ -6,20 +7,33 @@
   </div>
   <div class = "div__product--info">
     <form method="post" action="index.php?page=cart">
-      <div class = "div__product--input">
+
+      <?php if(($product['id'] == '14') || $product['id'] == '13' || $product['id'] == '19') :?>
+      <div class = "div__product--input div__product--input-active">
+        <?php else: ?>
+        <div class = "div__product--input">
+        <?php endif;?>
         <?php foreach ($allproducts as $allproduct): ?>
         <?php if(isset ($allproduct['bookclass'])) :?>
         <input type="radio" <?php if($allproduct['bookclass'] == 'Paperback'){ echo 'checked';}; ?> id = "radio<?php echo $allproduct['id'];?>" name="product_id" value="<?php echo $allproduct['id'];?>"/>
         <label class = "uppercase medium label__radio"  for="radio<?php echo $allproduct['id'];?>"><?php echo $allproduct['bookclass'];?> <br> €<?php echo $allproduct['price'];?></label>
+        <input type="hidden" name="type_id" value="<?php echo $allproduct['type_id']?>">
+        <input type="hidden" name="link_id" value="<?php echo $product['id']?>">
         <?php elseif(isset ($allproduct['color'])) :?>
         <input type="radio" <?php if($allproduct['color'] == 'blauw'){ echo 'checked';}; ?> id = "radio<?php echo $allproduct['id'];?>" name="product_id" value="<?php echo $allproduct['id'];?>"/>
         <label class = "<?php echo $allproduct['color'];?> uppercase medium label__radio"  for="radio<?php echo $allproduct['id'];?>"><?php echo $allproduct['color'];?> <br> €<?php echo $allproduct['price'];?></label>
+        <input type="hidden" name="type_id" value="<?php echo $allproduct['type_id']?>">
+        <input type="hidden" name="link_id" value="<?php echo $product['id']?>">
         <?php elseif(isset ($allproduct['month'])) :?>
         <input type="radio" <?php if($allproduct['month'] == '36 Maanden'){ echo 'checked';}; ?> id = "radio<?php echo $allproduct['id'];?>" name="product_id" value="<?php echo $allproduct['id'];?>"/>
-        <label class = "uppercase medium label__radio"  for="radio<?php echo $allproduct['id'];?>"><?php echo $allproduct['month'];?> <br> €<?php echo $allproduct['price'];?></label>
+        <label class = "uppercase medium label__radio"  for="radio<?php echo $allproduct['id'];?>"><?php echo $allproduct['month'];?> <br> €<?php echo $allproduct['price'];?> per maand</label>
+        <input type="hidden" name="type_id" value="<?php echo $allproduct['type_id']?>">
+        <input type="hidden" name="link_id" value="<?php echo $product['id']?>">
         <?php else :?>
         <input type="radio" checked  id = "radio<?php echo $allproduct['id'];?>" name="product_id" value="<?php echo $allproduct['id'];?>"/>
         <label class = "uppercase medium label__radio"  for="radio<?php echo $allproduct['id'];?>">€<?php echo $allproduct['price'];?></label>
+        <input type="hidden" name="type_id" value="<?php echo $allproduct['type_id']?>">
+        <input type="hidden" name="link_id" value="<?php echo $product['id']?>">
         <?php endif;?>
         <?php endforeach; ?>
       </div>
@@ -28,7 +42,7 @@
         </li>
         <li class = " li__product--benefit"><img class = "img__product--benefit" src="./assets/img/check.png" alt="check icon"><p class = "verysmall p__product--benefit"><span class = " bold span__green">gratis</span> retourneren binnen 30 dagen!</p>
         </li>
-        <li class = " li__product--benefit"><img class = "img__product--benefit" src="./assets/img/check.png" alt="check icon"><p class = "verysmall p__product--benefit"><span class = " bold span__green">altijd</span> de laagste prijs</p>
+        <li class = " li__product--benefit"><img class = "img__product--benefit" src="./assets/img/check.png" alt="check icon"><p class = "verysmall p__product--benefit"><span class = " bold span__green">gratis</span> bezorging vanaf €20,-</p>
         </li>
       </ul>
 
@@ -59,7 +73,7 @@
 <section class = " container container__dashed section__products">
   <h2 class = "h2__spotlight h2__products"><span class = "h2__background--red h2__background--padding">Relevante Producten</span></h2>
     <ul class = "ul__products">
-      <?php foreach ($relatedproducts as $relatedproduct): if (strlen($relatedproduct['title']) > 24) $product['title'] = substr($product['title'], 0, 21) . '...'; ?>
+      <?php foreach ($relatedproducts as $relatedproduct): if (strlen($relatedproduct['title']) > 24) $relatedproduct['title'] = substr($relatedproduct['title'], 0, 21) . '...'; ?>
       <li class = "li__product">
         <div class = "li__product--info">
           <a href="index.php?page=product-detail&amp;id=<?php echo $relatedproduct['id'];?>&amp;type=<?php echo $product['type_id']?>">

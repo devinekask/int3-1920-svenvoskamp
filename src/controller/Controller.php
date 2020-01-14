@@ -18,6 +18,11 @@ class Controller {
   }
 
   public function render() {
+    $numItems = 0;
+    foreach ($_SESSION['cart'] as $productId => $info) {
+      $numItems += $info['quantity'];
+    }
+    $this->set('numItems', $numItems);
     // set js variable according to environment (development / production)
     $this->set('js', '<script src="http://localhost:8080/script.js"></script>'); // webpack dev server
     // NEW : CSS
@@ -26,10 +31,7 @@ class Controller {
       $this->set('js', '<script src="script.js"></script>'); // regular script
       $this->set('css', '<link href="style.css" rel="stylesheet">'); // regular css tag
     }
-    $numItems = 0;
-    foreach ($_SESSION['cart'] as $productId => $info) {
-      $numItems += $info['quantity'];
-    }
+
     $this->createViewVarWithContent();
     $this->renderInLayout();
     if (!empty($_SESSION['info'])) {

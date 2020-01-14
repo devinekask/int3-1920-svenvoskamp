@@ -45,6 +45,11 @@
   vertical-align: center;
 }
 
+.h2__spotlight--black > span::before,
+.h2__spotlight--black > span::after {
+  border-bottom: 1px dashed black;
+}
+
 .h2__spotlight > span::before {
   right: 100%;
 }

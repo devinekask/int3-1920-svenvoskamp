@@ -45,12 +45,21 @@ class ProductDAO extends DAO {
   }
 
   public function selectProductAllByProductId($product_id){
-    $sql = "SELECT `products_all`.*, `bookclass`.`bookclass`, `colors`.`color`, `months`.`month` FROM `products_all` LEFT JOIN `bookclass` ON `bookclass`.`id` = `products_all`.`bookclass_id` LEFT JOIN `colors` ON `colors`.`id` = `products_all`.`color_id` LEFT JOIN `months` ON `months`.`id` = `products_all`.`month_id`  WHERE `products_all`.`product_id` = :product_id";
+    $sql = "SELECT `products_all`.*, `bookclass`.`bookclass`, `colors`.`color`, `months`.`month`, `products`.`type_id` FROM `products_all` LEFT JOIN `bookclass` ON `bookclass`.`id` = `products_all`.`bookclass_id` LEFT JOIN `colors` ON `colors`.`id` = `products_all`.`color_id` LEFT JOIN `months` ON `months`.`id` = `products_all`.`month_id` LEFT JOIN `products` ON `products`.`id` = `products_all`.`product_id`  WHERE `products_all`.`product_id` = :product_id";
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute(array(
       ':product_id' => $product_id
      ));
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  public function selectProductAllById($id){
+    $sql = "SELECT `products_all`.*, `bookclass`.`bookclass`, `colors`.`color`, `months`.`month`, `products`.`type_id` FROM `products_all` LEFT JOIN `bookclass` ON `bookclass`.`id` = `products_all`.`bookclass_id` LEFT JOIN `colors` ON `colors`.`id` = `products_all`.`color_id` LEFT JOIN `months` ON `months`.`id` = `products_all`.`month_id` LEFT JOIN `products` ON `products`.`id` = `products_all`.`product_id` WHERE `products_all`.`id` = :id";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute(array(
+      ':id' => $id
+     ));
+    return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
   public function selectProductsByTypeId($type_id, $id){

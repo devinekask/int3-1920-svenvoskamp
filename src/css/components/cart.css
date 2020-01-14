@@ -1,0 +1,243 @@
+.ul__cart--nav {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2.4rem;
+  padding-bottom: 2rem;
+}
+
+.div__h2--flex {
+  display: flex;
+  justify-content: center;
+}
+
+.p__cart--title {
+  margin-left: 3.5rem;
+  margin-top: 10rem;
+}
+
+thead,
+tbody {
+  border-bottom: 0.1rem dashed var(--mainRed);
+}
+thead {
+  padding-bottom: 1rem;
+}
+
+th {
+  line-height: 3rem;
+}
+
+.th__product {
+  width: 10rem;
+}
+
+.td__product {
+  margin-left: 1.5rem;
+}
+
+.th__name {
+  width: 35rem;
+}
+.td__name {
+  margin-left: 15rem;
+}
+
+.th__quantity {
+  width: 11rem;
+}
+
+.td__quantity {
+  width: 4rem;
+  margin-left: 3rem;
+}
+
+.th__itemprice {
+  width: 15rem;
+}
+
+.td__itemprice {
+  margin-left: 2rem;
+}
+
+.th__itemtotal {
+  width: 13rem;
+}
+
+.td__itemtotal {
+  margin-left: 2.2rem;
+}
+
+td {
+  height: 10rem;
+  vertical-align: middle;
+}
+
+.div__cart {
+  margin-top: 4rem;
+  margin-left: 3.5rem;
+}
+
+.button__cart--remove {
+  color: black;
+  background-color: var(--mainRed);
+  padding: 0.8rem 2rem;
+  border-radius: 1rem;
+  font-size: var(--fontSizeVerySmall);
+  margin-left: 3rem;
+  opacity: 0.7;
+}
+
+.button__cart--update {
+  background-color: var(--mainRed);
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  opacity: 0.7;
+  margin-top: 2.6rem;
+}
+
+.button__cart--remove:hover,
+.button__cart--update:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.div__cart--bottom {
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+}
+
+.input--discount {
+  font-size: var(--fontSizeVerySmall);
+  height: 3rem;
+  width: 20rem;
+  padding-left: 1rem;
+  margin-top: 1.2rem;
+}
+
+.button__submit--discount {
+  background-color: var(--mainGreen);
+  height: 2.9rem;
+  width: 20rem;
+  font-size: var(--fontSizeVerySmall);
+  margin-top: 2.6rem;
+}
+
+.div__cart--bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div__cart--discount {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.div__input--discount {
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.div__cart--recipe {
+  background-color: var(--mainGrey);
+  width: 42rem;
+  height: 25rem;
+  margin-left: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.label__standard {
+  background-color: white;
+  border: 1px solid black;
+  height: 1rem;
+  width: 1rem;
+  margin-left: 2rem;
+  opacity: 1;
+}
+
+input[type="radio"]:checked + .label__standard {
+  background-color: red;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div__recipe--bottom {
+  margin-top: 1.6rem;
+  border-top: 0.1rem dashed black;
+  padding-top: 2rem;
+}
+
+.div__recipe--top {
+  padding-top: 1.6rem;
+  border-bottom: 0.1rem dashed black;
+  padding-bottom: 1.6rem;
+}
+
+.div__recipe--total {
+  margin-top: 1.6rem;
+  border-bottom: 0.1rem dashed black;
+  padding-bottom: 1.6rem;
+}
+
+.p__bottom--text,
+.p__recipe--text,
+.p__basic--text,
+.p__total--text {
+  margin-left: 6rem;
+}
+
+.input__standard {
+  margin-bottom: 1rem;
+}
+
+.p__input--standard {
+  margin-left: 2rem;
+  margin-top: -0.35rem;
+}
+
+.div__recipe--discount {
+  margin-top: 1rem;
+}
+
+.label__standard {
+  margin-top: 1.6rem;
+}
+
+.label__standard:nth-child(2) {
+  margin-top: 3.2rem;
+}
+
+.p__bottom--amount,
+.p__deliver,
+.p__basic--amount,
+.p__recipe--amount,
+.p__total--amount {
+  margin-right: 4rem;
+}
+
+.p__deliver {
+  margin-top: 1.25rem;
+  opacity: 0.3;
+}
+
+.div__recipe--deliver {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.button__cart {
+  margin-top: 5rem;
+  margin-left: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+@media (--mobile) {
+  .ul__cart--nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}

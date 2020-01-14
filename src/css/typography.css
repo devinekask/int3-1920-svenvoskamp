@@ -24,9 +24,11 @@ h2,
 .p__spotlight--title,
 .button__spotlight,
 .p__checkbox,
-.uppercase {
+.uppercase,
+.li__cart--nav {
   text-transform: uppercase;
 }
+
 .li__nav--right,
 .li__nav--left,
 .tiny {
@@ -42,6 +44,7 @@ h2,
 .button__spotlight,
 .button__filter,
 .p__checkbox,
+.li__cart--active,
 .bold {
   font-weight: var(--fontWeightBold);
 }
@@ -65,14 +68,18 @@ h2,
 }
 
 .p__checkbox,
-.verysmall {
+.verysmall,
+.li__cart--nav {
   font-size: var(--fontSizeVerySmall);
 }
-
-.red {
-  color: var(--mainRed);
-}
-
 .span__green {
   color: var(--mainGreen);
+}
+
+.li__cart--nav {
+  color: #b0b0b0;
+}
+.red,
+.li__cart--active {
+  color: var(--mainRed);
 }

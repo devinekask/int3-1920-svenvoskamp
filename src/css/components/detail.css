@@ -6,6 +6,7 @@
 
 .div__product--title {
   margin-left: 3.5rem;
+  width: 40rem;
 }
 
 .img__product--detail {
@@ -133,6 +134,11 @@ input[type="radio"]:checked + .zwart {
   margin-top: 2rem;
 }
 
+.div__product--input-active,
+.div__product--input {
+  display: flex;
+}
+
 @media (--tablet) {
   .section__flex {
     display: block;
@@ -143,13 +149,19 @@ input[type="radio"]:checked + .zwart {
   .section__product--detail {
     display: block;
   }
+
   .button__product--detail {
     padding: 0.8rem 6rem;
   }
+
   .div__product--info {
     margin-left: 1.5rem;
   }
+
   .p__product--info {
     width: 30rem;
+  }
+  .div__product--input-active {
+    flex-direction: column;
   }
 }
