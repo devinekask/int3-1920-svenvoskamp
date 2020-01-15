@@ -19,6 +19,7 @@ class ProductsController extends Controller {
   }
 
   public function products() {
+    $_SESSION['discount'] = false;
 
     $type = false;
     if (!empty($_GET['type'])) {
@@ -37,6 +38,7 @@ class ProductsController extends Controller {
   }
 
   public function detail() {
+    $_SESSION['discount'] = false;
     if(!empty($_GET['id'])){
       $product = $this->productDAO->selectProductById($_GET['id']);
       $specs = $this->specDAO->selectSpecsByProductId($_GET['id']);

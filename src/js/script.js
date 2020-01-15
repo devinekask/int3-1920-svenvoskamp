@@ -62,15 +62,33 @@
     </li>`;
   };
 
+
+
+  const handleSubmit = e => {
+    console.log('test');
+   
+  };
+
   const init = () => {
     const $button = document.querySelector(`.button__filter`);
     if ($button) {
       $button.classList.add(`has-js`);
     }
+
+    if (document.querySelector('.button__product--detail')) {
+      const $cartbutton = document.querySelector('.button__product--detail');
+      console.log($cartbutton);
+      $cartbutton.addEventListener('click', handleSubmit);
+    }
+
+
     const $checkboxes = document.querySelectorAll('input[type=checkbox]');
     console.log($checkboxes);
     $checkboxes.forEach(checkbox => {
       checkbox.addEventListener('click', handleCheckEvent);
+
+
+
     });
   };
   init();

@@ -18,27 +18,21 @@
 </ul>
 <hr class = "grey__line grey__line--cart">
 
-<section class = "section__cart">
+<section class = "container section__cart">
   <div class = "container__dashed section__cart--main">
     <div class = "div__h2--flex">
     <h2 class = "h2__spotlight h2__spotlight--black"><span class = "h2__background--red">Jouw Winkelwagen</span></h2>
     </div>
     <p class = "bold medium uppercase p__cart--title">Wat een goede keuze!</p>
+    <div class = "div__cart--flex">
     <div class = "div__cart">
     <form action="index.php?page=cart" method="post">
-      <table class="table__nav">
-        <thead>
-            <tr>
-              <th class="bold medium th__product">Product</th>
-              <th class="bold medium th__name">Naam</th>
-              <th class="bold medium th__quantity">Aantal</th>
-              <th class="bold medium th__itemprice">Prijs per item</th>
-              <th class="bold medium th__itemtotal">Item Totaal</th>
-            </tr>
-        </thead>
-      <tbody>
       <?php
       $discount = 0.00;
+      if ($_SESSION['discount']){
+        $discount = $discount = 8.00;
+        $discount = (float)$discount;
+      }
       $totalTotal = 0;
       $orderTotal = 0;
       $afterDiscountTotal = 0;
@@ -48,35 +42,40 @@
           $orderTotal += (float)$productTotal;
           $orderTotal = (float)$orderTotal;
       ?>
-          <tr>
-            <td> <img class = "td__product" src="./assets/img/test.png" alt=""></td>
-            <td><p class="td__name small"><?php echo $product['product']['name'];?></p></td>
-            <td><input class="td__quantity" type="number" name="quantity[<?php echo $product['product']['id']?>]" value="<?php echo $product['quantity']?>" class="replace" required /></td>
-            <td><p class = "td__itemprice">&#8364;<?php echo $product['product']['price'];?></p></td>
-            <td><p class = "td__itemtotal">&#8364;<?php echo $productTotal; ?>,-</p></td>
-            <td><button type="submit" class="button__cart--remove" name="remove" value="<?php echo $product['product']['id']?>">&#215;</button></td>
-          </tr>
-      </tbody>
+
+
+
+      <div class = "cart__item">
+        <img src="./assets/img/test.png" alt="<?php echo $product['product']['name']?>">
+        <div class = "div__cart--info">
+        <?php if(isset ($product['product']['bookclass'])) :?>
+          <p class = "bold uppercase verysmall p__cart--info"><?php echo $product['product']['bookclass'];?></p>
+        <?php elseif(isset ($product['product']['color'])) :?>
+          <p class ="bold uppercase verysmall p__cart--info <?php echo $product['product']['color'];?>"><?php echo $product['product']['color'];?></p>
+        <?php elseif(isset ($product['product']['month'])) :?>
+          <p class = "bold uppercase verysmall p__cart--info"><?php echo $product['product']['month'];?></p>
+        <?php else:?>
+          <p class = "bold uppercase verysmall p__cart--info">standaard</p>
+        <?php endif; ?>
+          <p class = "p__cart--info-name verysmall bold "><?php echo $product['product']['name'];?> </p>
+          <input class="td__quantity" type="number" name="quantity[<?php echo $product['product']['id']?>]" value="<?php echo $product['quantity']?>" class="replace" required />
+          <p class = "red bold small p__cart--info-price">&#8364;<?php echo $productTotal;?></p>
+        </div>
+        <button type="submit" class="button__cart--remove" name="remove" value="<?php echo $product['product']['id']?>">&#215;
+      </div>
+
+
+
+
       <?php }
       $afterDiscountTotal = $orderTotal - $discount;
       if ($afterDiscountTotal >= 20) {$delevering = "gratis"; } else {$delevering = '4.95';} ?>
-      </table>
-      <div class = "div__cart--bottom">
-        <button type="submit" id="update-cart" class="button__cart--update" name="action" value="update">
+      <button type="submit" id="update-cart" class="button__cart--update" name="action" value="update">
           <img width="14" height="14" src="./assets/img/refresh.png" alt="refresh"></img>
-        </button>
-        <div class = "div__cart--discount">
-          <div class = "div__input--discount">
-            <label class = "label--discount verysmall uppercase"  for="discount">Kortingscode:</label>
-            <input class = "input--discount" type="text" name = "discount" id="discount">
-          </div>
-          <button type="submit" class = "button__submit--discount" name = "action" value = "check">
-            PAK DIE KORTING
-          </button>
-        </div>
+      </button>
       </div>
-    </div>
-    <div class = "div__cart--recipe">
+    <div class = "div__recipe--flex">
+    <div class = "div__cart--recipe div__cart--recipe-2">
       <div class = " div__recipe--top">
         <div class="flex div__recipe--basic">
           <p class = "small p__basic--text">Bestelling:</p>
@@ -84,7 +83,7 @@
         </div>
         <div class="flex div__recipe--discount">
           <p class = "small span__green p__recipe--text">Korting:</p>
-          <p class = "small span__green p__recipe--amount">- &#8364;<?php echo $discount;?></p>
+          <p class = "small span__green p__recipe--amount">- &#8364;<?php echo number_format((float)$discount, 2, '.', '');?></p>
         </div>
       </div>
       <div class = "flex div__recipe--total">
@@ -107,9 +106,26 @@
         </p>
         <input type="hidden" name="total" value=<?php echo $totalTotalTotal;?>>
       </div>
+
+        </div>
+        <div class = "div__cart--discount">
+          <div class = "div__input--discount">
+            <label class = "label--discount verysmall uppercase"  for="discount">Kortingscode:</label>
+            <input class = "input--discount" type="text" name = "discount" id="discount">
+          </div>
+          <button type="submit" class = "button__submit--discount" name = "action" value = "check">
+            PAK DIE KORTING
+          </button>
+      </div>
+        </div>
+
     </div>
     <button class = "button__spotlight button__cart" type ="submit" name = "action" value = "details">JOUW GEGEVENS</button>
     </form>
+    <div class = "div__cart--bottom">
+
+
+    </div>
   </div>
 </section>
 <?php endif;?>

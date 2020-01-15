@@ -127,6 +127,7 @@ input[type="checkbox"]:checked + label + .field--wrapper__fadress {
     margin-left: 0rem;
     width: 48rem;
   }
+
   .p__basic--amount,
   .p__recipe--amount,
   .p__total--amount,

@@ -28,29 +28,29 @@ class OrdersController extends Controller {
     $_SESSION['customer'] = false;
     $_SESSION['payment'] = false;
 
-
       if (!empty($_POST['action'])) {
-
         if ($_POST['action'] == 'add') {
           $this->_handleAdd();
           header('Location: index.php?page=product-detail&id='. $_POST['link_id'] . '&type='. $_POST['type_id']);
           exit();
         }
-
         if ($_POST['action'] == 'empty') {
           $_SESSION['cart'] = array();
         }
-
         if ($_POST['action'] == 'check') {
-          if ($_POST['discount'] == "1"){
-            $discount = '8.00';
-          } else {
-            $discount = '0.00';
+          foreach($_SESSION['cart'] as $product) {
+            if ($product['product']['id'] == "1" | $product['product']['id'] == "3" | $product['product']['id'] == "5"
+            | $product['product']['id'] == "7" | $product['product']['id'] == "9" | $product['product']['id'] == "11" | $product['product']['id'] == "13"
+            | $product['product']['id'] == "15" | $product['product']['id'] == "17" | $product['product']['id'] == "19"){
+              if ($_POST['discount'] == "1"){
+              $_SESSION['discount'] = true;
+            }
           }
+        }
           header('Location: index.php?page=cart');
           exit();
         }
-
+        
         if ($_POST['action'] == 'update') {
           $this->_handleUpdate();
         }
@@ -251,6 +251,7 @@ class OrdersController extends Controller {
               $this->set('errors',$errors);
               header('Location: index.php?page=finished');
               $_SESSION['cart'] = [];
+              $_SESSION['discount'] = false;
             }
           }
         }

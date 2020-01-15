@@ -164,7 +164,7 @@ input[type="radio"]:checked + .zwart {
   }
 
   .button__product--detail {
-    padding: 0.8rem 6rem;
+    padding: 0.8rem 4rem;
   }
 
   .div__product--info {
@@ -172,9 +172,20 @@ input[type="radio"]:checked + .zwart {
   }
 
   .p__product--info {
-    width: 30rem;
+    width: 35rem;
   }
   .div__product--input-active {
     flex-direction: column;
+  }
+}
+@media (--mobile) {
+  .label__radio {
+    padding: 1.2rem 0.6rem;
+  }
+  .p__product--info {
+    width: 25rem;
+  }
+  .h2__background--padding {
+    padding: 0.8rem 2.7rem;
   }
 }

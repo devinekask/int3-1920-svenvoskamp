@@ -5,6 +5,10 @@
   padding-bottom: 2rem;
 }
 
+.div__cart--flex {
+  display: flex;
+}
+
 .div__h2--flex {
   display: flex;
   justify-content: center;
@@ -38,6 +42,7 @@ th {
 .th__name {
   width: 35rem;
 }
+
 .td__name {
   margin-left: 15rem;
 }
@@ -47,8 +52,8 @@ th {
 }
 
 .td__quantity {
-  width: 4rem;
-  margin-left: 3rem;
+  width: 3rem;
+  margin-top: 1rem;
 }
 
 .th__itemprice {
@@ -79,12 +84,8 @@ td {
 
 .button__cart--remove {
   color: black;
-  background-color: var(--mainRed);
-  padding: 0.8rem 2rem;
-  border-radius: 1rem;
+
   font-size: var(--fontSizeVerySmall);
-  margin-left: 3rem;
-  opacity: 0.7;
 }
 
 .button__cart--update {
@@ -130,7 +131,8 @@ td {
 
 .div__cart--discount {
   display: flex;
-  margin-right: 2rem;
+  margin-left: 20rem;
+  margin-top: 4rem;
 }
 
 .div__input--discount {
@@ -143,8 +145,13 @@ td {
   background-color: var(--mainGrey);
   width: 42rem;
   height: 25rem;
-  margin-left: 2.5rem;
+  margin-left: 2rem;
   margin-top: 2.5rem;
+}
+
+.div__cart--recipe-2 {
+  margin-left: 20rem;
+  margin-top: 6rem;
 }
 
 .label__standard {
@@ -261,6 +268,68 @@ input[type="radio"]:checked + .label__standard {
   margin-right: 2rem;
 }
 
+.cart__item {
+  display: flex;
+  border-bottom: 0.1rem dashed black;
+  width: 30rem;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.div__cart--info {
+  margin-left: 2rem;
+}
+
+.p__cart--info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mainRed);
+  color: white;
+  width: 15rem;
+  height: 4rem;
+}
+
+.p__cart--info-name {
+  margin-top: 1rem;
+  max-width: 30rem;
+}
+
+.p__cart--info-price {
+  margin-top: 1rem;
+}
+
+.blauw {
+  background-color: #0097e6;
+}
+
+.wit {
+  border: 0.1rem solid black;
+  color: black;
+  background-color: white;
+}
+
+.zwart {
+  background-color: black;
+}
+
+.groen {
+  background-color: var(--mainGreen);
+}
+
+@media (--tablet) {
+  .div__cart--flex {
+    flex-direction: column;
+  }
+
+  .div__cart--discount {
+    margin-left: 2.5rem;
+  }
+}
+
+@media (--menu) {
+}
+
 @media (--mobile) {
   .ul__cart--nav {
     flex-direction: column;
@@ -268,5 +337,14 @@ input[type="radio"]:checked + .label__standard {
   }
   .button__emptycart {
     padding: 0.8rem 5rem;
+  }
+
+  .div__cart--discount {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button__cart {
+    padding: 0.8rem 4rem;
   }
 }
