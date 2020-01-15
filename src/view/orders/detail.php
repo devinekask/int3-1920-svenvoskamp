@@ -156,8 +156,7 @@
             </div>
             </div>
           </div>
-          <input type="submit" class="button__spotlight button__cart--details" value="Checkout">
-        </form>
+
       </div>
       <div class="div__cartdetails--right">
         <p class="bold medium uppercase p__cart--title p__cartdetail--right">Jouw bestelling</p>
@@ -165,7 +164,7 @@
       <div class = " div__recipe--top">
         <?php foreach($orderItems as $orderItem): ?>
         <div class="flex div__recipe--basic div__details--recipe-basic">
-          <p class = "small p__basic--text"><span class = "bold"><?php echo $orderItem['quantity'] .'x' . '</span>' . " " . $orderItem['name'];?></p>
+          <p class = "small p__basic--text"><span class = "bold"><?php echo $orderItem['quantity'] .'x' . '</span>' . " " . $orderItem['name'];?>:</p>
           <?php $ticketTotal = $orderItem['price'] * $orderItem['quantity']; ?>
           <p class = "small p__basic--amount">&#8364;<?php echo $ticketTotal; ?></p>
         </div>
@@ -188,6 +187,9 @@
       </div>
     </div>
       </div>
+
     </div>
+    <input type="submit" class="button__spotlight button__cart--details" value="Checkout">
+        </form>
   </div>
 </section>

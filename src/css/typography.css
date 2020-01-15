@@ -67,6 +67,10 @@ h2,
   font-size: var(--fontSizeSmall);
 }
 
+.verybig {
+  font-size: var(--fontSizeVeryBig);
+}
+
 .p__checkbox,
 .verysmall,
 .li__cart--nav {

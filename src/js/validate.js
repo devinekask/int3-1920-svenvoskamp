@@ -2,8 +2,6 @@
   const $form = document.querySelector('.form--detail');
   const $active = document.querySelector('.error--active');
 
-
-
   const init = () => {
 
     if ($form) {

@@ -103,3 +103,35 @@ input[type="checkbox"]:checked + label + .field--wrapper__fadress {
   color: var(--mainRed);
   margin-top: 0.5rem;
 }
+
+@media (--tablet) {
+  .div__cartdetails {
+    flex-direction: column;
+  }
+}
+
+@media (--mobile) {
+  .field--wrapper__adress {
+    width: 30rem;
+  }
+  .p__recipe--text,
+  .p__basic--text,
+  .p__total--text,
+  .p__bottom--text {
+    margin-left: 3rem;
+  }
+
+  .div__cart--recipe {
+    margin-left: 0rem;
+    width: 48rem;
+  }
+  .p__basic--amount,
+  .p__recipe--amount,
+  .p__total--amount,
+  .p__bottom--amount {
+    margin-right: 17rem;
+  }
+  .button__cart--details {
+    padding: 0.8rem 8rem;
+  }
+}

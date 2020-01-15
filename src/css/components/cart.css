@@ -235,9 +235,31 @@ input[type="radio"]:checked + .label__standard {
   margin-bottom: 4rem;
 }
 
+.div__emptycart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p__emptycart {
+  margin-top: 15rem;
+  text-align: center;
+}
+
+.button__emptycart {
+  margin-top: 6rem;
+}
+
+.img__emptycart {
+  margin-top: 7rem;
+}
+
 @media (--mobile) {
   .ul__cart--nav {
     flex-direction: column;
     align-items: center;
+  }
+  .button__emptycart {
+    padding: 0.8rem 5rem;
   }
 }

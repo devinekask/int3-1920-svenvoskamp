@@ -1,4 +1,16 @@
+<?php if($numItems <= 0): ?>
+  <hr class = "grey__line grey__line--nav">
+  <div class = "div__emptycart container">
+    <p class = "verybig bold p__emptycart">🙀 Je hebt nog geen producten in je winkelmand! </p>
+    <form action="index.php">
+      <button class = "button__spotlight button__emptycart" type="submit">Naar de shop</button>
+    </form>
+    <img class = "img__emptycart" src="./assets/img/empty.png" alt="Suske en wiske renned">
 
+  </div>
+
+
+<?php else: ?>
 <ul class = "container ul__cart--nav">
   <li class = "li__cart--nav li__cart--active">1 Winkelmand</li>
   <li class = "li__cart--nav">2 Jouw Gegevens</li>
@@ -100,3 +112,4 @@
     </form>
   </div>
 </section>
+<?php endif;?>

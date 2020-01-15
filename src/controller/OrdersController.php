@@ -192,10 +192,16 @@ class OrdersController extends Controller {
           if(!$updatedOrder){
             $errors = $this->orderDAO->validateD($dataD);
             $this->set('errors',$errors);
+            header('Location: index.php?page=cart-payment');
+            exit();
           }
         }
       }
 
+      }
+
+      public function payment() {
+        
       }
     }
 
