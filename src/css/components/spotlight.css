@@ -73,6 +73,11 @@
   margin-right: 3.5rem;
   background-color: var(--mainYellow);
   padding: 0.8rem 3rem;
+  transition: opacity 0.2s ease-in;
+}
+
+.button__spotlight:hover {
+  opacity: 0.6;
 }
 
 button {

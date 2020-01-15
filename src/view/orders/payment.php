@@ -30,6 +30,7 @@
           <p class="bold medium uppercase p__cart--title p__cartdetail--right">Jouw bestelling</p>
           <div class="div__cart--recipe div__details--recipe">
             <div class=" div__recipe--top">
+              <a class = "a--edit" href="index.php?page=cart"><img width= "20" height = "20"src="./assets/img/edit.svg" alt="edit icon"></a>
               <?php foreach($orderItems as $orderItem): ?>
               <div class="flex div__recipe--basic div__details--recipe-basic">
                 <p class="small p__basic--text"><span
@@ -59,6 +60,7 @@
         <div class="div__cartdetails--right">
           <p class="bold medium uppercase p__cart--title p__cartdetail--right">Jouw Gegevens</p>
           <div class="div__cart--recipe div__details--recipe">
+          <a class = "a--edit" href="index.php?page=cart-detail"><img class = "img--edit" width= "20" height = "20"src="./assets/img/edit.svg" alt="edit icon"></a>
             <ul class = "ul__cartdetails">
               <li class = "small li__cartdetails p__basic--text"><?php echo $customer['name'] . " " . $customer['surname']; ?></li>
               <li class = "small li__cartdetails p__basic--text"><?php echo $customer['adres'] . " " . $customer['number']; ?></li>

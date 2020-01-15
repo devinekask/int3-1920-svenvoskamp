@@ -4,19 +4,19 @@
   };
 
   const getProducts = async () => {
-    const $form = document.getElementById("form__filter");
+    const $form = document.getElementById('form__filter');
     console.log($form);
     const data = new FormData($form);
     const entries = [...data.entries()];
-    console.log("entries:", entries);
+    console.log('entries:', entries);
     const qs = new URLSearchParams(entries).toString();
-    console.log("querystring", qs);
-    const url = `${$form.getAttribute("action")}?${qs}`;
-    console.log("url", url);
+    console.log('querystring', qs);
+    const url = `${$form.getAttribute('action')}?${qs}`;
+    console.log('url', url);
 
     const response = await fetch(url, {
       headers: new Headers({
-        Accept: "application/json"
+        Accept: 'application/json'
       })
     });
 
@@ -25,10 +25,9 @@
     handleLoadProducts(products);
     console.log(products);
 
-    window.history.pushState(
-      {},
-      "",
-      `${window.location.href.split("?")[0]}?action=&${qs}`
+    window.history.pushState({},
+      '',
+      `${window.location.href.split('?')[0]}?action=&${qs}`
     );
   };
 
@@ -53,7 +52,6 @@
         </a>
       </div>
       <div class = "li__product--link">
-        <a href=""><img class = "img__cart" src="./assets/img/cart.png" alt="cart"></a>
         <a href="index.php?page=product-detail&amp;id=${product.id}&amp;type=${product.type_id}">
           <div class = "li__product--more">
             <p class = "p__product--more tiny ">&rarr; meer info</p>
@@ -69,10 +67,10 @@
     if ($button) {
       $button.classList.add(`has-js`);
     }
-    const $checkboxes = document.querySelectorAll("input[type=checkbox]");
+    const $checkboxes = document.querySelectorAll('input[type=checkbox]');
     console.log($checkboxes);
     $checkboxes.forEach(checkbox => {
-      checkbox.addEventListener("click", handleCheckEvent);
+      checkbox.addEventListener('click', handleCheckEvent);
     });
   };
   init();

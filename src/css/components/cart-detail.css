@@ -105,6 +105,10 @@ input[type="checkbox"]:checked + label + .field--wrapper__fadress {
   margin-left: 8rem;
 }
 
+.button__edit {
+  background-color: transparent;
+}
+
 @media (--tablet) {
   .div__cartdetails {
     flex-direction: column;

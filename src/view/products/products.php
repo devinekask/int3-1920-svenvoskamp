@@ -60,7 +60,6 @@
           </a>
         </div>
         <div class = "li__product--link">
-          <a href=""><img class = "img__cart" src="./assets/img/cart.png" alt="cart"></a>
           <a href="index.php?page=product-detail&amp;id=<?php echo $product['id'];?>&amp;type=<?php echo $product['type_id']?>">
             <div class = "li__product--more">
               <p class = "p__product--more tiny ">&rarr; meer info</p>

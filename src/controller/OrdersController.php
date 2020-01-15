@@ -202,9 +202,9 @@ class OrdersController extends Controller {
           $updatedOrder = $this->orderDAO->updateOrder($dataD);
           if(!$updatedOrder){
             $errors = $this->orderDAO->validateD($dataD);
-            $_SESSION['customer'] = true;
             $this->set('errors',$errors);
             header('Location: index.php?page=cart-payment');
+            $_SESSION['customer'] = true;
             exit();
           }
         }

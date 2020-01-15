@@ -4,7 +4,6 @@
 }
 
 .ul__cartdetails {
-  padding-top: 1.6rem;
   padding-bottom: 1.6rem;
 }
 
@@ -26,6 +25,18 @@
 
 .p__label--payment {
   margin-top: 2.5rem;
+}
+
+.a--edit {
+  margin-left: 2rem;
+}
+
+.a--edit:hover {
+  opacity: 0.5rem;
+}
+
+.img--edit {
+  margin-top: 1.6rem;
 }
 
 .div__input--payment {
