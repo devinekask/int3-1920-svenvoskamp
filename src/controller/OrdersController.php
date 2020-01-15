@@ -120,7 +120,7 @@ class OrdersController extends Controller {
             'quantity' => 0
           );
         }
-        $_SESSION['info'] = 'Product added to your cart';
+        $_SESSION['info'] = 'Product toegevoegd';
         $_SESSION['cart'][$_POST['product_id']]['quantity']++;
       }
 
@@ -136,7 +136,7 @@ class OrdersController extends Controller {
         foreach ($_POST['quantity'] as $productId => $quantity) {
           if (!empty($_SESSION['cart'][$productId])) {
             $_SESSION['cart'][$productId]['quantity'] = $quantity;
-            $_SESSION['info'] = 'Cart updated';
+            $_SESSION['info'] = 'Winkelmandje bijgewerkt';
           }
         }
         $this->_removeWhereQuantityIsZero();

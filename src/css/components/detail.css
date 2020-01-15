@@ -125,6 +125,15 @@ input[type="radio"]:checked + .zwart {
   padding-right: 6rem;
 }
 
+.p__product--back {
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+
+.p__product--back:hover {
+  text-decoration: underline;
+}
+
 .ul__product--specs {
   margin-left: 3.5rem;
   margin-top: -1.8rem;
@@ -137,6 +146,10 @@ input[type="radio"]:checked + .zwart {
 .div__product--input-active,
 .div__product--input {
   display: flex;
+}
+
+.section__products {
+  padding-bottom: 2rem;
 }
 
 @media (--tablet) {

@@ -63,6 +63,41 @@
   margin-top: 5rem;
 }
 
+.session--info,
+.session--error {
+  position: absolute;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: var(--mainRed);
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  top: 0;
+  animation: fadeOut 3s forwards ease-out;
+  animation-delay: 0.3s;
+  z-index: 1;
+}
+
+.session--info {
+  background-color: var(--mainGreen);
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
 @media (--tablet) {
   .nav__desktop {
     display: none;

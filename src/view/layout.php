@@ -80,6 +80,12 @@
         <hr class = "grey__line grey__line--nav">
       </nav>
       </header>
+      <?php if (!empty($_SESSION['info'])): ?>
+  <div class="session--info"><?php echo $_SESSION['info']; ?></div>
+  <?php endif; ?>
+  <?php if (!empty($_SESSION['error'])): ?>
+  <div class="session--error"><?php echo $_SESSION['error']; ?></div>
+  <?php endif; ?>
     <main>
       <?php echo $content;?>
     </main>

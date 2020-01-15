@@ -1,6 +1,9 @@
 <hr class = "grey__line grey__line--nav">
+<p class = "container tiny p__product--back"><a class = "tiny" href="index.php?page=products">< terug naar shop</a></p>
 <section class = "container section__product--detail">
+
   <h2 class = "hidden">Product Detail</h2>
+
   <div class = "div__product--title">
     <p class = "uppercase bold big p__product--title"><?php echo $product['title'];?></p>
     <img class = "img__product--detail" src="<?php echo $product['product_detail_image'];?>" alt="<?php echo $product['title'];?>">
