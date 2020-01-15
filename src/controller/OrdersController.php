@@ -4,6 +4,7 @@ require_once __DIR__ . '/Controller.php';
 require_once __DIR__ . '/../dao/ProductDAO.php';
 require_once __DIR__ . '/../dao/OrderDAO.php';
 require_once __DIR__ . '/../dao/CustomerDAO.php';
+require_once __DIR__ . '/../dao/PaymentDAO.php';
 
 
 
@@ -12,16 +13,21 @@ class OrdersController extends Controller {
   private $productDAO;
   private $orderDAO;
   private $customerDAO;
+  private $paymentDAO;
 
   function __construct() {
     $this->productDAO = new ProductDAO();
     $this->orderDAO = new OrderDAO();
     $this->customerDAO = new CustomerDAO();
+    $this->paymentDAO = new PaymentDAO();
   }
 
   public function cart() {
     $this->set('title', "Winkelwagen");
     $_SESSION['order'] = false;
+    $_SESSION['customer'] = false;
+    $_SESSION['payment'] = false;
+
 
       if (!empty($_POST['action'])) {
 
@@ -144,6 +150,11 @@ class OrdersController extends Controller {
         }
       }
       public function detail() {
+        if(!$_SESSION['order']){
+          header('Location: index.php?page=home');
+          exit();
+        }else {
+        $this->set('title', "Winkelwagen - Jouw Gegevens");
 
         if(!empty($_POST['action'])){
           if($_POST['action'] == 'insertCustomer'){
@@ -191,17 +202,73 @@ class OrdersController extends Controller {
           $updatedOrder = $this->orderDAO->updateOrder($dataD);
           if(!$updatedOrder){
             $errors = $this->orderDAO->validateD($dataD);
+            $_SESSION['customer'] = true;
             $this->set('errors',$errors);
             header('Location: index.php?page=cart-payment');
             exit();
           }
         }
       }
-
-      }
+    }
+  }
 
       public function payment() {
-        
+        if(!$_SESSION['customer']){
+          header('Location: index.php?page=home');
+          exit();
+        }else {
+        $this->set('title', "Winkelwagen - Betaling");
+        $delivery = $_SESSION['delivery'];
+        $this->set('delivery', $delivery);
+
+        $lastOrderId = $this->orderDAO->selectLastOrder();
+        $this->set('lastOrderId', $lastOrderId);
+
+        $lastUserId = $this->customerDAO->selectLastCustomer();
+        $this->set('lastUserId', $lastUserId);
+
+        $orderItems = $this->orderDAO->selectCartItemByOrderId($lastOrderId['max']);
+        $this->set('orderItems', $orderItems);
+
+        $customer = $this->customerDAO->selectCustomerByOrderId($lastOrderId['max']);
+        $this->set('customer', $customer);
+
+        $payments = $this->paymentDAO->selectAllPayments();
+        $this->set('payments', $payments);
+
+        if(!empty($_POST['action'])){
+          if($_POST['action'] == 'insertPayment'){
+            $dataE= array(
+              'customer_id' => $lastUserId['max'],
+              'status' => "Order confirmed",
+              'id' => $lastOrderId['max'],
+              'payment_id' => $_POST['payments']
+            );
+            $updatedOrderPayment = $this->orderDAO->updateOrderPayment($dataE);
+            if(!$updatedOrderPayment){
+              $_SESSION['payment'] = true;
+              $errors = $this->orderDAO->validateE($dataE);
+              $this->set('errors',$errors);
+              header('Location: index.php?page=finished');
+              $_SESSION['cart'] = [];
+            }
+          }
+        }
       }
     }
+      public function finished(){
+        if(!$_SESSION['payment']){
+          header('Location: index.php?page=home');
+          exit();
+        }else {
+        $lastUserId = $this->customerDAO->selectLastCustomer();
+        $this->set('lastUserId', $lastUserId);
 
+        $lastOrderId = $this->orderDAO->selectLastOrder();
+        $this->set('lastOrderId', $lastOrderId);
+
+        $customer = $this->customerDAO->selectCustomerByOrderId($lastOrderId['max']);
+        $this->set('customer', $customer);
+      }
+    }
+  }

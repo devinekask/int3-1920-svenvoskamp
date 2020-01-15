@@ -244,6 +244,8 @@ input[type="radio"]:checked + .label__standard {
 .p__emptycart {
   margin-top: 15rem;
   text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .button__emptycart {
@@ -252,6 +254,11 @@ input[type="radio"]:checked + .label__standard {
 
 .img__emptycart {
   margin-top: 7rem;
+}
+
+.img__finished {
+  margin-bottom: 2rem;
+  margin-right: 2rem;
 }
 
 @media (--mobile) {

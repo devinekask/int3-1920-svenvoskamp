@@ -43,6 +43,17 @@ class CustomerDAO extends DAO {
         return false;
     }
 
+    public function selectCustomerByOrderId($order_id){
+      $sql = "SELECT * FROM `customers`
+      INNER JOIN `orders`
+      ON `orders`.`customer_id` = `customers`.`id`
+      WHERE `orders`.`id` = :order_id";
+      $stmt = $this->pdo->prepare($sql);
+      $stmt->bindValue(':order_id', $order_id);
+      $stmt->execute();
+      return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function validate($dataC){
         $errors = [];
         if (empty($dataC['name'])) {

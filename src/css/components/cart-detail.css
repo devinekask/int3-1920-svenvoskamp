@@ -30,7 +30,7 @@
 .field--wrapper__fadress {
   display: none;
   background-color: var(--mainGrey);
-  width: 50rem;
+  width: 45rem;
   padding-top: 1rem;
   margin-top: 1.6rem;
 }
@@ -75,10 +75,6 @@ input[type="checkbox"]:checked + label + .field--wrapper__fadress {
   justify-content: space-between;
 }
 
-.p__cartdetail--right {
-  margin-right: 3.5rem;
-}
-
 .div__recipe--details-bottom {
   border-top: none;
   padding-bottom: 2rem;
@@ -104,13 +100,15 @@ input[type="checkbox"]:checked + label + .field--wrapper__fadress {
   margin-top: 0.5rem;
 }
 
+.p__cartdetail--right {
+  margin-right: 3.5rem;
+  margin-left: 8rem;
+}
+
 @media (--tablet) {
   .div__cartdetails {
     flex-direction: column;
   }
-}
-
-@media (--mobile) {
   .field--wrapper__adress {
     width: 30rem;
   }
@@ -129,9 +127,22 @@ input[type="checkbox"]:checked + label + .field--wrapper__fadress {
   .p__recipe--amount,
   .p__total--amount,
   .p__bottom--amount {
-    margin-right: 17rem;
+    margin-right: 2rem;
   }
   .button__cart--details {
     padding: 0.8rem 8rem;
+  }
+
+  .p__cartdetail--right {
+    margin-left: 3rem;
+  }
+
+  @media (--mobile) {
+    .p__basic--amount,
+    .p__recipe--amount,
+    .p__total--amount,
+    .p__bottom--amount {
+      margin-right: 17rem;
+    }
   }
 }

@@ -32,6 +32,19 @@ class OrderDAO extends DAO {
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
+  public function updateOrderPayment($dataE){
+    $sql = "UPDATE `orders`
+    SET `customer_id` = :customer_id, `status` = :status, `payment_id` = :payment_id
+    WHERE `id` = :id";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':customer_id', $dataE['customer_id']);
+    $stmt->bindValue(':status', $dataE['status']);
+    $stmt->bindValue(':payment_id', $dataE['payment_id']);
+    $stmt->bindValue(':id', $dataE['id']);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
   public function insertOrder($data){
     $errors = $this->validate( $data );
       if (empty($errors)) {
@@ -122,4 +135,21 @@ class OrderDAO extends DAO {
         }
         return $errors;
       }
+
+      public function validateE($dataE){
+        $errors = [];
+          if (empty($dataE['id'])) {
+            $errors['id'] = 'id is required';
+          }
+          if (empty($dataE['status'])) {
+            $errors['status'] = 'status is required';
+          }
+          if (empty($dataE['customer_id'])) {
+            $errors['customer_id'] = 'customer_id is required';
+          }
+          if (empty($dataE['payment_id'])) {
+            $errors['payment_id'] = 'payment_id is required';
+          }
+          return $errors;
+        }
 }
