@@ -11,6 +11,7 @@
 
 
 <?php else: ?>
+  <hr class = "grey__line grey__line--nav">
 <ul class = "container ul__cart--nav">
   <li class = "li__cart--nav li__cart--active">1 Winkelmand</li>
   <li class = "li__cart--nav">2 Jouw Gegevens</li>
@@ -44,7 +45,7 @@
       ?>
 
 
-
+<a href="index.php?page=product-detail&id=<?php echo $product['product']['product_id'];?>&type=<?php echo $product['product']['type_id'];?>">
       <div class = "cart__item">
         <img src="<?php echo $product['product']['cart_image'];?>" alt="<?php echo $product['product']['name']?>">
         <div class = "div__cart--info">
@@ -58,11 +59,14 @@
           <p class = "bold uppercase verysmall p__cart--info">standaard</p>
         <?php endif; ?>
           <p class = "p__cart--info-name verysmall bold "><?php echo $product['product']['name'];?> </p>
+          </a>
           <input class="td__quantity" type="number" name="quantity[<?php echo $product['product']['id']?>]" value="<?php echo $product['quantity']?>" class="replace" required />
           <p class = "red bold small p__cart--info-price">&#8364;<?php echo $productTotal;?></p>
         </div>
         <button type="submit" class="button__cart--remove" name="remove" value="<?php echo $product['product']['id']?>">&#215;
       </div>
+
+
 
 
 

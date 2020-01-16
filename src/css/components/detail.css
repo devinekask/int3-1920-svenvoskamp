@@ -161,6 +161,15 @@ input[type="radio"]:checked + .zwart {
   margin-left: 2rem;
 }
 
+.button__product--tocart {
+  background-color: var(--mainRed);
+  margin-top: 2rem;
+}
+
+.p__button--detail-2 {
+  color: white;
+}
+
 @media (--tablet) {
   .section__flex {
     display: block;

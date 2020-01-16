@@ -20,6 +20,7 @@ class ProductsController extends Controller {
 
   public function products() {
     $_SESSION['discount'] = false;
+    $_SESSION['tocart'] = false;
 
     $type = false;
     if (!empty($_GET['type'])) {

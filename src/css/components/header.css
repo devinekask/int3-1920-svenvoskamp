@@ -115,6 +115,22 @@
     margin-top: 0.6rem;
     margin-right: 3.5rem;
   }
+  .li__nav--main:nth-child(1) {
+    margin-left: 3rem;
+  }
+
+  .li__nav--main:nth-child(6) {
+    margin-right: 3rem;
+  }
+
+  .nav__top--left {
+    margin-left: 3.5rem;
+    justify-content: space-between;
+  }
+
+  .img__nav--search {
+    margin-left: 2rem;
+  }
 }
 
 @media (--menu) {
@@ -153,6 +169,9 @@
   }
   .grey__line--nav {
     margin-top: -1.7rem;
+  }
+  .img__mobile--logo {
+    margin-left: 2rem;
   }
 }
 @media (--mobile) {

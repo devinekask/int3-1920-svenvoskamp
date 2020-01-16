@@ -27,6 +27,7 @@ class OrdersController extends Controller {
     $_SESSION['order'] = false;
     $_SESSION['customer'] = false;
     $_SESSION['payment'] = false;
+    $_SESSION['tocart'] = false;
 
       if (!empty($_POST['action'])) {
         if ($_POST['action'] == 'add') {
@@ -80,6 +81,7 @@ class OrdersController extends Controller {
         }
 
         if ($_POST['action'] == 'details') {
+
           foreach($_SESSION['cart'] as $product) {
             $dataB= array(
               'order_id' => $lastOrderId['max'],
@@ -128,6 +130,7 @@ class OrdersController extends Controller {
         }
         $_SESSION['info'] = 'Product toegevoegd';
         $_SESSION['cart'][$_POST['product_id']]['quantity']++;
+        $_SESSION['tocart'] = 'true';
       }
 
 
@@ -156,6 +159,7 @@ class OrdersController extends Controller {
         }
       }
       public function detail() {
+        $_SESSION['tocart'] = false;
         if(!$_SESSION['order']){
           header('Location: index.php?page=home');
           exit();
@@ -219,6 +223,7 @@ class OrdersController extends Controller {
   }
 
       public function payment() {
+        $_SESSION['tocart'] = false;
         if(!$_SESSION['customer']){
           header('Location: index.php?page=home');
           exit();
@@ -264,6 +269,7 @@ class OrdersController extends Controller {
       }
     }
       public function finished(){
+        $_SESSION['tocart'] = false;
         if(!$_SESSION['payment']){
           header('Location: index.php?page=home');
           exit();

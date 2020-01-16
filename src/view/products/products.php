@@ -1,3 +1,4 @@
+<hr class = "grey__line grey__line--nav">
 <section class = "section__spotlight">
   <div class = "container__dashed section__spotlight--main">
     <h2 class = "h2__spotlight"><span class = "h2__background--red">In de spotlight</span></h2>
