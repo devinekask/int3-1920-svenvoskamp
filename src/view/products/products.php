@@ -41,7 +41,7 @@
             <div class="submit__wrap">
               <input type="submit" value="FILTER" class="button__filter">
             </div>
-          <div>
+          </div>
         </form>
       </div>
     </div>
