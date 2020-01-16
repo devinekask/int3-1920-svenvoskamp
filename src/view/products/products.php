@@ -25,22 +25,23 @@
                 <label class="checkbox">
                     <input class = "input__checkbox" type="checkbox" name="type[]" value="1"
                         <?php if(isset($_GET['type'])){ if (!empty($_GET['type'][0] == 1)){ echo 'checked';}}?>>
-                    <p class = "p__checkbox">Boeken</p>
+                    <span class = "p__checkbox">Boeken</span>
                 </label>
                 <label class="checkbox">
                     <input class = "input__checkbox" type="checkbox" name="type[]" value="2"
                         <?php if(isset($_GET['type'])){ if (!empty($_GET['type'][0] == 2)){ echo 'checked';}}?>>
-                    <p class = "p__checkbox">Accesoires</p>
+                    <span class = "p__checkbox">Accesoires</span>
                 </label>
                 <label class="checkbox">
                     <input class = "input__checkbox" type="checkbox" name="type[]" value="3"
                         <?php if(isset($_GET['type'])){ if (!empty($_GET['type'][0] == 3)){ echo 'checked';}}?>>
-                    <p class = "p__checkbox">Abonnement</p>
+                    <span class = "p__checkbox">Abonnement</span>
                 </label>
             </div>
             <div class="submit__wrap">
               <input type="submit" value="FILTER" class="button__filter">
             </div>
+          <div>
         </form>
       </div>
     </div>
