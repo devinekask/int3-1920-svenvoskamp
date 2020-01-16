@@ -85,7 +85,7 @@
             <div class="field--wrapper">
               <label class="field--wrapper__label" for="zip">
                 <span class="field--wrapper__label small p">Postcode:</span>
-                <input class="input__cart--zip" type="text" pattern="[0-9]{4}" required id="number" placeholder="8500"
+                <input class="input__cart--zip" type="text" required id="number" placeholder="8500"
                   name="zip" value="<?php if(!empty($_POST['zip'])){ echo $_POST['zip'];} ?>"
                   class="error--active input" />
                 <span class="error">
@@ -146,7 +146,7 @@
               <div class="field--wrapper">
               <label class="field--wrapper__label" for="fzip">
                 <span class="field--wrapper__label small p">Postcode:</span>
-                <input class="input__cart--zip" type="text" pattern="[0-9]{4}"  id="number" placeholder="8500"
+                <input class="input__cart--zip" type="text"  id="number" placeholder="8500"
                   name="fzip" value="<?php if(!empty($_POST['fzip'])){ echo $_POST['fzip'];} ?>"
                   class="error--active input" />
                 <span class="error">

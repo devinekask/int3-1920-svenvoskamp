@@ -39,9 +39,16 @@
                 <p class="small p__basic--amount">&#8364;<?php echo $ticketTotal; ?></p>
               </div>
               <?php endforeach; ?>
+              <?php
+                $discount = 0.00;
+                if ($_SESSION['discount']){
+                  $discount = $discount = 8.00;
+                  $discount = (float)$discount;
+                  }
+              ?>
               <div class="flex div__recipe--discount div__details--recipe-discount">
                 <p class="small span__green p__recipe--text">Korting:</p>
-                <p class="small span__green p__recipe--amount">- &#8364; 0,00</p>
+                <p class="small span__green p__recipe--amount">- &#8364;<?php echo number_format((float)$discount, 2, '.', '');?></p>
               </div>
               <div class="flex div__recipe--deliver ">
                 <p class="small  p__total--text">Standaard levering (morgen):</p>

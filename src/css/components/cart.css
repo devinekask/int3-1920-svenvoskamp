@@ -92,7 +92,6 @@ td {
   background-color: var(--mainRed);
   height: 3rem;
   width: 3rem;
-  border-radius: 50%;
   opacity: 0.7;
   margin-top: 2.6rem;
 }

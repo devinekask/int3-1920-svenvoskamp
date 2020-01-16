@@ -46,7 +46,7 @@
 
 
       <div class = "cart__item">
-        <img src="./assets/img/test.png" alt="<?php echo $product['product']['name']?>">
+        <img src="<?php echo $product['product']['cart_image'];?>" alt="<?php echo $product['product']['name']?>">
         <div class = "div__cart--info">
         <?php if(isset ($product['product']['bookclass'])) :?>
           <p class = "bold uppercase verysmall p__cart--info"><?php echo $product['product']['bookclass'];?></p>

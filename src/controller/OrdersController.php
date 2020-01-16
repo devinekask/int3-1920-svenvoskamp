@@ -37,6 +37,7 @@ class OrdersController extends Controller {
         if ($_POST['action'] == 'empty') {
           $_SESSION['cart'] = array();
         }
+
         if ($_POST['action'] == 'check') {
           foreach($_SESSION['cart'] as $product) {
             if ($product['product']['id'] == "1" | $product['product']['id'] == "3" | $product['product']['id'] == "5"
@@ -44,13 +45,18 @@ class OrdersController extends Controller {
             | $product['product']['id'] == "15" | $product['product']['id'] == "17" | $product['product']['id'] == "19"){
               if ($_POST['discount'] == "1"){
               $_SESSION['discount'] = true;
+              $_SESSION['info'] = 'Korting toegevoegd';
+            }else {
+              $_SESSION['error'] = 'Onjuiste kortingscode';
             }
+          }else {
+            $_SESSION['error'] = 'Kortingscode niet geldig op dit/deze product(en)';
           }
         }
           header('Location: index.php?page=cart');
           exit();
         }
-        
+
         if ($_POST['action'] == 'update') {
           $this->_handleUpdate();
         }

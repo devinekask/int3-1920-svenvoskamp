@@ -15,7 +15,7 @@
 
 .div__product--info {
   margin-right: 3.5rem;
-  margin-top: 5.7rem;
+  margin-top: 10rem;
 }
 
 input[type="radio"] {
@@ -117,6 +117,10 @@ input[type="radio"]:checked + .zwart {
   display: flex;
 }
 
+.p__product--discount {
+  margin-top: 1rem;
+}
+
 .section__product--info {
   padding-right: 10rem;
 }
@@ -152,6 +156,11 @@ input[type="radio"]:checked + .zwart {
   padding-bottom: 2rem;
 }
 
+.p__product--discover {
+  margin-top: 3rem;
+  margin-left: 2rem;
+}
+
 @media (--tablet) {
   .section__flex {
     display: block;
@@ -169,6 +178,7 @@ input[type="radio"]:checked + .zwart {
 
   .div__product--info {
     margin-left: 1.5rem;
+    margin-top: 4rem;
   }
 
   .p__product--info {
@@ -187,5 +197,10 @@ input[type="radio"]:checked + .zwart {
   }
   .h2__background--padding {
     padding: 0.8rem 2.7rem;
+  }
+
+  .p__product--title,
+  .p__product--discount {
+    width: 28rem;
   }
 }

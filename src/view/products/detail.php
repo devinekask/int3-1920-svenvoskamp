@@ -6,6 +6,9 @@
 
   <div class = "div__product--title">
     <p class = "uppercase bold big p__product--title"><?php echo $product['title'];?></p>
+    <?php if($product['id'] >= 1 && $product['id'] <= 10): ?>
+      <p class = "p__product--discount small bold span__green">*In de humo van deze week is op de flap een kortingscode voor dit product te vinden.</p>
+    <?php endif; ?>
     <img class = "img__product--detail" src="<?php echo $product['product_detail_image'];?>" alt="<?php echo $product['title'];?>">
   </div>
   <div class = "div__product--info">
@@ -50,8 +53,12 @@
       </ul>
 
       <button class = " button__spotlight button__product--detail" type = "submit" name = "action" value = "add"><img class ="img__button--detail" src="./assets/img/cart.png" alt="cart icon"><p class = "p__button--detail">IN WINKELMAND</p></button>
-      <?php if ($product['id'] >= 1 && $product['id'] <= 10): ?>
+      <?php if ($product['longread']): ?>
+      <?php if ($product['longread'] == 1): ?>
       <button class = " button__spotlight button__product--detail button__product--discover"><p class = "p__button--detail">ONTDEK</p></button>
+      <?php else: ?>
+      <p class = "p__product--discover red bold verysmall"> Longread beschikbaar vanaf <?php echo $product['longread'];?></p>
+      <?php endif;?>
       <?php endif;?>
     </form>
   </div>
