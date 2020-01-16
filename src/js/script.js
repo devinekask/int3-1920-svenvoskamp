@@ -57,7 +57,6 @@
             <p class = "p__product--more tiny ">&rarr; meer info</p>
           </div>
         </a>
-        </div>
       </div>
     </li>`;
   };
@@ -66,7 +65,7 @@
 
   const handleSubmit = e => {
     console.log('test');
-   
+
   };
 
   const init = () => {

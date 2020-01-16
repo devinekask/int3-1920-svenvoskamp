@@ -44,7 +44,6 @@
           </div>
         </form>
       </div>
-    </div>
   <hr class = "grey__line grey__line--2">
 </section>
 
@@ -67,7 +66,6 @@
               <p class = "p__product--more tiny ">&rarr; meer info</p>
             </div>
           </a>
-          </div>
         </div>
       </li>
       <?php endforeach;?>
