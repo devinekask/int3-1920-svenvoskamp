@@ -39,6 +39,11 @@ class OrdersController extends Controller {
           $_SESSION['cart'] = array();
         }
 
+        if ($_POST['action'] == 'toroad') {
+          header('Location: index.php?page=road');
+          exit();
+    }
+
         if ($_POST['action'] == 'check') {
           foreach($_SESSION['cart'] as $product) {
             if ($product['product']['id'] == "1" | $product['product']['id'] == "3" | $product['product']['id'] == "5"

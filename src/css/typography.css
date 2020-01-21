@@ -87,3 +87,37 @@ h2,
 .li__cart--active {
   color: var(--mainRed);
 }
+
+.p__road,
+.p__road--bold,
+.p__road--italic,
+.p__road--medium {
+  font-family: orpheuspro, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.p__road--bold {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.p__road--italic {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.p__road--medium {
+  font-weight: 500;
+  font-style: normal;
+}
+
+.h1__road {
+  font-size: 10.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.p__road--undertitle {
+  font-size: 3.6rem;
+}

@@ -1,5 +1,5 @@
 <hr class = "grey__line grey__line--nav">
-<p class = "container tiny p__product--back"><a class = "tiny" href="index.php?page=products">< terug naar shop</a></p>
+<p class = "container tiny p__product--back"><a class = "tiny" href="index.php?page=products">&lt; terug naar shop</a></p>
 <section class = "container section__product--detail">
 
   <h2 class = "hidden">Product Detail</h2>
@@ -55,12 +55,11 @@
       <button class = " button__spotlight button__product--detail" type = "submit" name = "action" value = "add"><img class ="img__button--detail " src="./assets/img/cart.svg" width = "18" height = "18" alt="cart icon"><p class = "p__button--detail">IN WINKELMAND</p></button>
 
       <?php if($_SESSION['tocart']): ?>
-        <button class = " button__spotlight button__product--detail button__product--tocart" type = "submit" name = "action" value = "tocart"> <p class = "p__button--detail p__button--detail-2">NAAR WINKELMAND</p></button>
+        <button class = " button__spotlight button__product--detail button__product--tocart" type = "submit" name = "action" value = "tocart"> <span class = "p__button--detail p__button--detail-2">NAAR WINKELMAND</span></button>
       <?php endif;?>
       <?php if ($product['longread']): ?>
       <?php if ($product['longread'] == 1): ?>
-      <button class = " button__spotlight button__product--detail button__product--discover"><p class = "p__button--detail">ONTDEK</p></button>
-
+      <button type = "submit" name = "action" value = "toroad" class = " button__spotlight button__product--detail button__product--discover"><a href ="index.php?page=road"><span class = "p__button--detail"> ONTDEK</span></a></button>
       <?php else: ?>
       <p class = "p__product--discover red bold verysmall"> Longread beschikbaar vanaf <?php echo $product['longread'];?></p>
       <?php endif;?>
@@ -104,7 +103,6 @@
               <p class = "p__product--more tiny ">&rarr; meer info</p>
             </div>
           </a>
-          </div>
         </div>
       </li>
       <?php endforeach;?>

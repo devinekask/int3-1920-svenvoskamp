@@ -5,9 +5,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width = device-width">
   <title>HUMO - <?php echo $title;?></title>
+  <link rel="stylesheet" href="https://use.typekit.net/cov4duu.css">
+  <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre&display=swap" rel="stylesheet">
   <?php echo $css;?>
 </head>
 
+<?php if ($title == "The Road"): ?>
+  <body>
+  <header>
+    <div class = "effect">
+    <div class="img__effect"></div>
+	  <div class="img__effect"></div>
+	  <div class="img__effect"></div>
+	  <div class="img__effect"></div>
+	  <div class="img__effect"></div>
+    <div class = "container">
+    <nav class = "road__nav">
+      <ul class = "ul__nav--road">
+        <li class = "white li__nav--road">< naar de shop</li>
+        <li class = "li__nav--road"><img src="./assets/img/img_road/logo.png" alt="logo"></li>
+        <li class = "white li__nav--road">andere broeken ></li>
+      </ul>
+    </nav>
+    </div>
+    <div class = "div__header--title">
+      <h1 class = "white p__road--bold h1__road">The Road</h1>
+      <p class = " white p__road--medium p__road--undertitle">Een digitale ervaring door HUMO</p>
+    </div>
+    <div class='nav__scroll--button'></div>
+    </div>
+  </header>
+
+
+<?php else: ?>
 <body>
   <header>
     <nav class="nav__desktop">
@@ -95,6 +125,8 @@
   <?php endif; ?>
   <?php if (!empty($_SESSION['error'])): ?>
   <div class="session--error"><?php echo $_SESSION['error']; ?></div>
+  <?php endif; ?>
+
   <?php endif; ?>
   <main>
     <?php echo $content;?>

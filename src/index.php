@@ -35,6 +35,10 @@ $routes = array(
   'finished' => array(
     'controller' => 'Orders',
     'action' => 'finished'
+  ),
+  'road' => array(
+    'controller' => 'Road',
+    'action' => 'index'
   )
 
 

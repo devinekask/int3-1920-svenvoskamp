@@ -131,12 +131,15 @@
   .nav__desktop {
     display: none;
   }
+
   .nav__tablet {
     display: none;
   }
+
   .nav__mobile {
     display: unset;
   }
+
   .nav__top {
     padding-top: 0rem;
   }

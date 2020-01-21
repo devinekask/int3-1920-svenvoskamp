@@ -9,6 +9,7 @@
 @import "./css/components/cart.css";
 @import "./css/components/cart-detail.css";
 @import "./css/components/cart-payment.css";
+@import "./css/components/road.css";
 
 html {
   box-sizing: border-box;
