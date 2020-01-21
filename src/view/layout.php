@@ -7,12 +7,13 @@
   <title>HUMO - <?php echo $title;?></title>
   <link rel="stylesheet" href="https://use.typekit.net/cov4duu.css">
   <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
   <?php echo $css;?>
 </head>
 
 <?php if ($title == "The Road"): ?>
   <body>
-  <header>
+  <header class = "header--road">
     <div class = "effect">
     <div class="img__effect"></div>
 	  <div class="img__effect"></div>
