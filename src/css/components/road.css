@@ -439,6 +439,22 @@
   display: none;
 }
 
+.fadein {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+.fadeout {
+  -webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeout 2s; /* Firefox < 16 */
+  -ms-animation: fadeout 2s; /* Internet Explorer */
+  -o-animation: fadeout 2s; /* Opera < 12.1 */
+  animation: fadeout 2s;
+}
+
 .div__polaroid--image1:hover + .div__polaroid--textcontent1 {
   display: block;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -577,4 +593,88 @@
 .button__dream:nth-child(3) {
   margin-right: 10rem;
   margin-top: -3rem;
+}
+
+.article__vending {
+  margin-top: 15rem;
+}
+
+.div__vending--flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.h2__road--vending {
+  width: 16rem;
+}
+
+.p__vending {
+  text-align: right;
+}
+
+.div__vending--image {
+  background-image: url(../../assets/img/img_road/vending_background.png);
+  background-repeat: no-repeat;
+  width: 31rem;
+  height: 67rem;
+  margin-top: 15rem;
+}
+
+.div__vending--content--flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image__vending {
+  margin-left: 4rem;
+  padding-top: 1rem;
+}
+
+.shake {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(7deg);
+  }
+  30% {
+    transform: rotate(-7deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.image__can {
+  margin-right: 20rem;
+}
+
+.div__vending--content {
+  margin-left: 28rem;
+}
+
+.image__can {
+  margin-bottom: 5rem;
+}
+.img__klik--svg {
+  position: absolute;
+  margin-top: 4rem;
+  left: 40vw;
+  opacity: 0.4;
+}
+
+.img__klik--svg-2 {
+  margin-top: 50rem;
+  left: 55vw;
 }

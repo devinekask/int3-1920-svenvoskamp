@@ -109,6 +109,7 @@
         beschreven nachtmerries in het kampvuur van vanavond gooien. “
       </p>
     </div>
+    <img class = "img__klik--svg" src="./assets/img/img_road/klik.svg" alt="Klik icon">
     <div class="div__dreams--buttons">
 
     </div>
@@ -124,4 +125,19 @@
       </p>
     </div>
   </article>
+  <article class = "article__vending">
+    <img class = "img__klik--svg img__klik--svg-2" src="./assets/img/img_road/klik2.svg" alt="Klik icon">
+    <div class = "container div__vending--flex">
+  <h2 class="white h2__road h2__road--vending">Dag 370</h2>
+  <p class="white p__road--text p__road--bold p__vending">“Mijn vader zegt dat ik op moet passen voor de scherven. De supermarkt ligt vol met gebroken flessen. We zijn opzoek naar voedsel. Tot mijn verbazing zie ik in de verte een drankautomaat staan. Hij ziet er niet kapot uit. Ik roep mijn vader en hij komt naar mij toe. Hij is ontzettend blij. Deze dranken laten hem herinneren aan de vroegere tijd. Hij gaat zitten en staart naar de automaat. Hij begint te vertellen. Ik hou mijn pen en papier in de aanslag. Ik ben klaar voor wat mooie verhalen.  In deze sombere tijd.”</p>
+  </div>
+  <div class = "div__vending--content--flex">
+  <div class = "div__vending--content">
+  </div>
+  <div class = "div__vending--image">
+    <img class = "image__vending" src="./assets/img/img_road/vending.png" alt="vending machine">
+  </div>
+</div>
+</article>
+
 </section>
