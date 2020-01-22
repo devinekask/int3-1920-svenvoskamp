@@ -313,7 +313,7 @@
   content: "";
   height: 300%;
   left: -50%;
-  opacity: 0.05;
+  opacity: 0.03;
   position: fixed;
   top: -110%;
   width: 300%;
@@ -385,11 +385,6 @@
   margin-top: 13.2rem;
   z-index: 1;
 }
-.p__polaroid--1,
-.p__polaroid--2,
-.p__polaroid--3 {
-  display: none;
-}
 
 .p__polaroid--1 {
   margin-left: 4rem;
@@ -434,10 +429,17 @@
 .div__hover--svg {
   position: absolute;
   margin-top: 4rem;
-  left: 35vw;
+  left: 37vw;
+  opacity: 0.4;
 }
 
-.img__polaroid1:hover + .p__polaroid--1 {
+.div__polaroid--textcontent1,
+.div__polaroid--textcontent2,
+.div__polaroid--textcontent3 {
+  display: none;
+}
+
+.div__polaroid--image1:hover + .div__polaroid--textcontent1 {
   display: block;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -446,7 +448,7 @@
   animation: fadein 2s;
 }
 
-.img__polaroid2:hover ~ .p__polaroid--2 {
+.div__polaroid--image2:hover + .div__polaroid--textcontent2 {
   display: block;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -455,7 +457,7 @@
   animation: fadein 2s;
 }
 
-.img__polaroid3:hover + .p__polaroid--3 {
+.div__polaroid--image3:hover + .div__polaroid--textcontent3 {
   display: block;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -511,4 +513,68 @@
   to {
     opacity: 1;
   }
+}
+
+.h2__road-2 {
+  width: 16rem;
+}
+
+.h2__road--dream {
+  width: 21rem;
+}
+
+.article__dreams {
+  margin-top: 10rem;
+}
+
+.div__dreams--flex {
+  margin-top: 10rem;
+  display: flex;
+}
+
+.div__dreams--textcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 19rem;
+}
+
+.p__dreams {
+  text-align: right;
+  width: 40rem;
+}
+
+.div__written--dreams {
+  display: flex;
+  justify-content: center;
+}
+
+.button__dream {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-color: var(--mainOrangeRoad);
+}
+
+.div__dreams--buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 70rem;
+  position: absolute;
+  margin-top: 35rem;
+}
+
+.button__dream:nth-child(1) {
+  margin-top: 8rem;
+  margin-left: 2rem;
+}
+
+.button__dream:nth-child(2) {
+  margin-right: 10rem;
+  margin-top: -7rem;
+}
+
+.button__dream:nth-child(3) {
+  margin-right: 10rem;
+  margin-top: -4rem;
 }

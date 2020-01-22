@@ -23,7 +23,7 @@
     <div class = "container">
     <nav class = "road__nav">
       <ul class = "ul__nav--road">
-        <li class = "white li__nav--road">< naar de shop</li>
+        <li class = "white li__nav--road">&lt; naar de shop</li>
         <li class = "li__nav--road"><img src="./assets/img/img_road/logo.png" alt="logo"></li>
         <li class = "white li__nav--road">andere broeken ></li>
       </ul>
