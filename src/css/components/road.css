@@ -716,9 +716,7 @@
   .p__road--text {
     width: 40rem;
   }
-  .h2__road {
-    margin-left: 8rem;
-  }
+
   .div__text--right {
     margin-top: 5.6rem;
   }
@@ -868,12 +866,111 @@
   .p__road--can {
     width: 40rem;
   }
+  .img__klik--svg-2 {
+    left: 37vw;
+  }
 }
 
 @media (--tabletmini) {
   .img__effect {
     background: url(../../assets/img/img_road/header_768.png) no-repeat 50% 0;
     background-size: cover;
+  }
+  .div__text--flex {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  .p__road--text {
+    margin-right: 3rem;
+  }
+
+  .svg__donker {
+    width: 25rem;
+    height: 27.75rem;
+  }
+
+  .section--road {
+    padding-top: 5rem;
+  }
+
+  .div__text--flex-2 {
+    flex-direction: column;
+  }
+
+  .p__road--text-right {
+    text-align: left;
+    margin-left: 3rem;
+  }
+
+  .div__polaroid--flex {
+    flex-direction: column;
+  }
+  .polaroid__flex--2 {
+    align-items: flex-end;
+  }
+  .p__polaroid--1 {
+    margin-left: -1rem;
+  }
+
+  .p__polaroid--2 {
+    margin-right: -0.2rem;
+  }
+
+  .p__polaroid--1,
+  .p__polaroid--2,
+  .p__polaroid--3 {
+    margin-top: 5rem;
+  }
+
+  .button__dream {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .button__dream:nth-child(3) {
+    margin-right: 41rem;
+    margin-top: -15rem;
+  }
+  .button__dream:nth-child(1) {
+    margin-top: -10rem;
+    margin-right: 3rem;
+  }
+
+  .button__dream:nth-child(2) {
+    margin-top: -18rem;
+    margin-right: 10rem;
+  }
+
+  .div__dreams--textcontent {
+    width: 58rem;
+  }
+
+  .div__vending--flex {
+    width: auto;
+  }
+
+  .img__klik--3 {
+    width: 20rem;
+    height: 14.8rem;
+  }
+
+  .img__klik--svg {
+    margin-top: 0rem;
+  }
+
+  .div__vending--content--flex {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    margin-top: -8rem;
+  }
+  .div__vending--content {
+    margin-right: 11rem;
+  }
+
+  .img__klik--svg-2 {
+    margin-top: 60rem;
+    left: 7vw;
   }
 }
 

@@ -1,11 +1,9 @@
 <h1 class="hidden">The Road</h1>
 <section class="section--road">
   <article>
-    <div class="container">
-      <h2 class="white h2__road">Dag 34</h2>
-    </div>
     <div class="div__text--flex">
       <div class="container">
+      <h2 class="white h2__road">Dag 34</h2>
         <p class="white p__road--text p__road">“Het lijkt net alsof het buiten steeds donkerder wordt. Ik weet
           niet of dat komt doordat de zon zijn kracht
           verliest, doordat de mist dichter wordt of door mijn hoofd dat steeds minder licht wilt zien. De dagen zijn
@@ -20,7 +18,7 @@
       </div>
       <img class = "svg__donker" src="./assets/img/img_road/donker.svg" alt="donker">
     </div>
-    <div class="div__text--flex">
+    <div class="div__text--flex div__text--flex-2">
       <img class="img__lang" src="./assets/img/img_road/lang.svg" alt="lang">
       <div class="container">
         <div class="div__text--right">
@@ -108,15 +106,16 @@
         beschreven nachtmerries in het kampvuur van vanavond gooien. “
       </p>
     </div>
-    <img class="img__klik--svg" src="./assets/img/img_road/klik.svg" alt="Klik icon">
+    <img class="img__klik--svg img__klik--3" src="./assets/img/img_road/klik.svg" alt="Klik icon">
     <div class="div__dreams--buttons">
     </div>
     <div class="div__dreams--flex">
       <img srcset="./assets/img/img_road/nightmares_480.png 310w,
+      ./assets/img/img_road/nightmares_768.png 379w,
     ./assets/img/img_road/nightmares_968.png 535w,
     ./assets/img/img_road/nightmares_1280.png 663w,
     ./assets/img/img_road/nightmares_1600.png 799w" sizes="(max-width: 480px) 300px,
-     (max-width: 768px) 550px,
+     (max-width: 768px) 370px,
      (max-width: 968px) 550px,
      (max-width: 1280px) 650px,
      (max-width: 1600px) 800px,
