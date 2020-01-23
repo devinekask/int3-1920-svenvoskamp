@@ -70,7 +70,7 @@
     <img class = "image__can" src="${can.img}" alt="${can.can}">
     <div class = "container">
     <h2 class="white h2__road h2__road--vending">${can.can}</h2>
-    <p class="white p__road--text p__road--bold">${can.text}</p>
+    <p class="white p__road--text p__road">${can.text}</p>
     </div>
   `;
   };
@@ -91,7 +91,7 @@
     const $p = document.createElement(`p`);
     $p.classList.add(`white`);
     $p.classList.add(`p__road--text`);
-    $p.classList.add(`p__road--bold`);
+    $p.classList.add(`p__road`);
     $p.classList.add(`p__dreams`);
     $p.textContent = ($dream.dataset.text);
 

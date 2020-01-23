@@ -25,5 +25,7 @@
 
 @custom-media --mobile (max-width: 480px);
 @custom-media --menu (max-width: 600px);
+@custom-media --tabletmini (max-width: 768px);
 @custom-media --tablet (max-width: 980px);
+@custom-media --imac (max-width: 1280px);
 @custom-media --macbook (max-width: 1690px);

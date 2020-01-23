@@ -55,3 +55,7 @@ li {
 .has-js {
   display: none;
 }
+
+body {
+  height: 100%;
+}
