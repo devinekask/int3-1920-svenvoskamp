@@ -62,7 +62,7 @@
       </div>
     </div>
     <div class="div__polaroid--svg">
-      <img src="./assets/img/img_road/verwoest.svg" alt="Verwoeste natuur">
+      <img class = "img__verwoest" src="./assets/img/img_road/verwoest.svg" alt="Verwoeste natuur">
     </div>
     <div class="div__hover--svg">
       <img src="./assets/img/img_road/hover.svg" alt="hover">
@@ -144,7 +144,9 @@
       <div class="div__vending--content">
       </div>
       <div class="div__vending--image">
-        <img class="image__vending" src="./assets/img/img_road/vending.png" alt="vending machine">
+      <img class = "image__vending" srcset="./assets/img/img_road/vending_480.png 168w,
+      ./assets/img/img_road/vending.png 241w" sizes="(max-width: 480px) 170px,
+      300px" src="./assets/img/img_road/vending.png" alt="vening machine">
       </div>
     </div>
   </article>

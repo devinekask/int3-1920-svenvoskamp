@@ -943,7 +943,7 @@
   }
 
   .div__dreams--textcontent {
-    width: 58rem;
+    width: 48rem;
   }
 
   .div__vending--flex {
@@ -972,11 +972,106 @@
     margin-top: 60rem;
     left: 7vw;
   }
+
+  .img__verwoest {
+    width: 40rem;
+    height: 16.4rem;
+  }
 }
 
 @media (--mobile) {
   .img__effect {
     background: url(../../assets/img/img_road/header_480.png) no-repeat 50% 0;
     background-size: cover;
+  }
+  .img__lang {
+    width: 30rem;
+    height: 26rem;
+  }
+
+  .div__polaroid--flex:nth-child(1) {
+    margin-left: 2rem;
+  }
+
+  .p__polaroid--1,
+  .p__polaroid--2,
+  .p__polaroid--3 {
+    width: 25rem;
+  }
+
+  .polaroid__flex--2 {
+    margin-right: 3rem;
+  }
+
+  .polaroid__flex--3 {
+    margin-left: 0rem;
+  }
+
+  .img__verwoest {
+    width: 25rem;
+    height: 10.2rem;
+  }
+
+  .h2__road--dream,
+  .h2__road--vending {
+    margin-right: 2rem;
+  }
+
+  .p__dream--intro {
+    width: auto;
+  }
+
+  .div__dreams--textcontent {
+    width: 32rem;
+  }
+
+  .img__klik--svg {
+    left: 32vw;
+    transform: rotate(-27deg);
+  }
+  .p__road--text {
+    margin-left: 2rem;
+    margin-right: 1rem;
+  }
+
+  .p__vending {
+    margin-right: 2rem;
+    width: auto;
+    margin-left: 1rem;
+  }
+  .p__dreams {
+    width: auto;
+    margin-left: 1rem;
+    margin-right: 2rem;
+  }
+
+  .div__vending--content {
+    margin-right: -13rem;
+    margin-top: -20rem;
+  }
+
+  .div__vending--image {
+    background-image: url(../../assets/img/img_road/vending_background_480.png);
+    width: auto;
+  }
+
+  .img__klik--svg-2 {
+    left: 10vw;
+    width: 10rem;
+    transform: rotate(0deg);
+  }
+
+  .p__road--can {
+    width: 28rem;
+  }
+
+  .button__dream:nth-child(3) {
+    margin-right: 46rem;
+    margin-top: -18rem;
+  }
+
+  .button__dream:nth-child(1) {
+    margin-top: -13rem;
+    margin-right: 3rem;
   }
 }
