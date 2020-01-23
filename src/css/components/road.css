@@ -681,23 +681,27 @@
 @media (--imac) {
   .img__effect {
     background: url(../../assets/img/img_road/header_1280.png) no-repeat 50% 0;
+    background-size: cover;
   }
 }
 
 @media (--tablet) {
   .img__effect {
     background: url(../../assets/img/img_road/header_968.png) no-repeat 50% 0;
+    background-size: cover;
   }
 }
 
 @media (--tabletmini) {
   .img__effect {
     background: url(../../assets/img/img_road/header_768.png) no-repeat 50% 0;
+    background-size: cover;
   }
 }
 
 @media (--mobile) {
   .img__effect {
     background: url(../../assets/img/img_road/header_480.png) no-repeat 50% 0;
+    background-size: cover;
   }
 }
