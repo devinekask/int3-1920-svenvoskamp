@@ -781,6 +781,93 @@
     background: url(../../assets/img/img_road/header_968.png) no-repeat 50% 0;
     background-size: cover;
   }
+  .svg__donker {
+    width: 30rem;
+    height: 33.3rem;
+  }
+  .h2__road {
+    margin-left: 3rem;
+  }
+  .p__road--text {
+    margin-left: 3rem;
+    width: auto;
+  }
+
+  .p__road--text-right {
+    margin-right: 3rem;
+    margin-left: 0rem;
+  }
+
+  .div__hover--svg {
+    display: none;
+  }
+
+  .div__polaroid--flex:nth-child(1) {
+    margin-left: 5rem;
+  }
+
+  .polaroid__flex--2 {
+    margin-top: 3rem;
+  }
+
+  .polaroid__flex--3 {
+    margin-top: 8rem;
+    margin-left: 1rem;
+  }
+
+  .p__polaroid--1,
+  .p__polaroid--2,
+  .p__polaroid--3 {
+    width: 40rem;
+  }
+
+  .div__polaroid--textcontent1,
+  .div__polaroid--textcontent2,
+  .div__polaroid--textcontent3 {
+    display: block;
+  }
+
+  .div__polaroid--image1:hover + .div__polaroid--textcontent1,
+  .div__polaroid--image2:hover + .div__polaroid--textcontent2,
+  .div__polaroid--image3:hover + .div__polaroid--textcontent3 {
+    animation: none;
+  }
+  .p__road--written {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .p__dream--intro,
+  .p__dreams,
+  .p__vending {
+    width: 45rem;
+  }
+  .h2__road--vending,
+  .p__vending,
+  .h2__road--dream,
+  .p__dreams {
+    margin-left: 0rem;
+    margin-right: 3rem;
+  }
+  .button__dream:nth-child(1) {
+    margin-top: -3rem;
+  }
+  .button__dream:nth-child(2) {
+    margin-top: -15rem;
+  }
+  .button__dream:nth-child(3) {
+    margin-right: 27rem;
+    margin-top: -11rem;
+  }
+  .h2__road--can {
+    margin-left: 3rem;
+  }
+
+  .div__vending--content {
+    margin-left: 0rem;
+  }
+  .p__road--can {
+    width: 40rem;
+  }
 }
 
 @media (--tabletmini) {

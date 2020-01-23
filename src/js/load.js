@@ -78,8 +78,8 @@
     $selectContent.innerHTML = `
     <img class = "image__can" srcset="${can.img}">
     <div class = "container">
-    <h2 class="white h2__road h2__road--vending">${can.can}</h2>
-    <p class="white p__road--text p__road">${can.text}</p>
+    <h2 class="white h2__road h2__road--vending h2__road--can">${can.can}</h2>
+    <p class="white p__road--text p__road p__road--can">${can.text}</p>
     </div>
   `;
   };

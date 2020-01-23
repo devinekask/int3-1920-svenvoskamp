@@ -18,7 +18,7 @@
           over het leven op deze kapotte aardbodem.”
         </p>
       </div>
-      <img src="./assets/img/img_road/donker.svg" alt="donker">
+      <img class = "svg__donker" src="./assets/img/img_road/donker.svg" alt="donker">
     </div>
     <div class="div__text--flex">
       <img class="img__lang" src="./assets/img/img_road/lang.svg" alt="lang">
@@ -114,7 +114,7 @@
     <div class="div__dreams--flex">
       <img srcset="./assets/img/img_road/nightmares_480.png 310w,
     ./assets/img/img_road/nightmares_968.png 535w,
-    ./assets/img/img_road/nightmares_1280.png 663w,ç
+    ./assets/img/img_road/nightmares_1280.png 663w,
     ./assets/img/img_road/nightmares_1600.png 799w" sizes="(max-width: 480px) 300px,
      (max-width: 768px) 550px,
      (max-width: 968px) 550px,
