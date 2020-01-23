@@ -17,19 +17,28 @@
       id: 1,
       can: `Cola`,
       text: `“Ik loop rond door het bos. Ik ben mijn vader kwijt. Hij zij mij nooit alleen laten. Hij was op zoek naar voedsel en zou binnen twee minuten terug zijn. Ik schreeuw de naam van mijn vader, maar het enige wat ik hoor is mijn eigen echo. Ik begin te rennen. Ik moet mijn vader vinden. Ik hoor een geweerschot. Ik volg het geluid en zie dat mijn vader op de grond ligt. Ik schrik wakker.”`,
-      img: `./assets/img/img_road/cola.png`
+      img: `./assets/img/img_road/cola_1280.png 221w,
+      ./assets/img/img_road/cola.png 388w"
+       sizes="(max-width: 1280px) 250px,
+              400px" src="./assets/img/img_road/cola.png" alt="cola"`
     },
     {
       id: 2,
       can: `Orange`,
       text: `“Mijn vader is in slaap gevallen. Na een paar lange dagen kan het ook niet anders dat hij moe is. Ik kan niet in slaap komen. Langzaam hoor ik een ritselend geluid door de bomen. Ik ga mijn tent uit om te kijken wat er is. Ik word bij mijn keel gegrepen door een onbekend persoon. Hij wilt al ons voedsel hebben. Ik probeer me los te rukken en op dat moment wil hij mijn keel doorsnijden. Ik schrik wakker.”`,
-      img: `./assets/img/img_road/orange.png`
+      img: `./assets/img/img_road/orange_1280.png 221w,
+      ./assets/img/img_road/orange.png 388w"
+       sizes="(max-width: 1280px) 250px,
+              400px" src="./assets/img/img_road/orange.png" alt="orange"`
     },
     {
       id: 3,
       can: `Lemon`,
       text: `“Het enige wat ik zie is zwarte rook. Ik kan niet ademhalen en ik begin in paniek te raken. Alles om mij heen is zwart. Alles, maar dan ook alles. Op het moment dat ik om hulp wil roepen voel ik een verstikkend gevoel in mijn keel. Ik kan nergens heen. Dit is het moment dat ik heen zal gaan. Op het moment dat ik de warmte van het vuur op mijn huid kan voelen, schrik ik wakker.”`,
-      img: `./assets/img/img_road/lemon.png`
+      img: `./assets/img/img_road/lemon_1280.png 221w,
+      ./assets/img/img_road/lemon.png 388w"
+       sizes="(max-width: 1280px) 250px,
+              400px" src="./assets/img/img_road/lemon.png" alt="lemon"`
     }
   ];
 
@@ -67,7 +76,7 @@
     }
     $selectContent.classList.add(`fadein`);
     $selectContent.innerHTML = `
-    <img class = "image__can" src="${can.img}" alt="${can.can}">
+    <img class = "image__can" srcset="${can.img}">
     <div class = "container">
     <h2 class="white h2__road h2__road--vending">${can.can}</h2>
     <p class="white p__road--text p__road">${can.text}</p>

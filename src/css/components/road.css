@@ -660,7 +660,7 @@
 }
 
 .div__vending--content {
-  margin-left: 28rem;
+  margin-left: 20rem;
 }
 
 .image__can {
@@ -682,6 +682,97 @@
   .img__effect {
     background: url(../../assets/img/img_road/header_1280.png) no-repeat 50% 0;
     background-size: cover;
+  }
+
+  .div__vending--content {
+    margin-left: 10rem;
+  }
+
+  .img__klik--svg {
+    margin-top: -12rem;
+    left: 57vw;
+  }
+  .p__dreams {
+    width: 36rem;
+  }
+  .button__dream:nth-child(1) {
+    margin-top: 0rem;
+  }
+  .button__dream:nth-child(2) {
+    margin-right: 10rem;
+    margin-top: -13rem;
+  }
+  .button__dream:nth-child(3) {
+    margin-right: 22rem;
+    margin-top: -9rem;
+  }
+  .div__dreams--textcontent {
+    width: 30rem;
+  }
+  .img__klik--svg-2 {
+    margin-top: 50rem;
+    left: 48vw;
+  }
+  .p__road--text {
+    width: 40rem;
+  }
+  .h2__road {
+    margin-left: 8rem;
+  }
+  .div__text--right {
+    margin-top: 5.6rem;
+  }
+
+  .img__lang {
+    margin-top: 3rem;
+  }
+
+  .div__text--written {
+    margin-top: 8rem;
+  }
+
+  .p__road--written {
+    margin-left: 6rem;
+  }
+  .div__polaroid--flex:nth-child(1) {
+    margin-left: 10rem;
+  }
+  .polaroid__flex--3 {
+    margin-top: 16rem;
+  }
+  .div__hover--svg {
+    left: 16vw;
+    margin-top: 2rem;
+  }
+  .polaroid__flex--2 {
+    margin-top: 0rem;
+  }
+  .div__polaroid--svg {
+    margin-top: 2rem;
+  }
+
+  .p__polaroid--2 {
+    margin-top: 12rem;
+  }
+
+  .p__dream--intro {
+    margin-left: 8rem;
+  }
+
+  .div__dreams--flex {
+    display: block;
+    flex-direction: column;
+  }
+
+  .div__dreams--textcontent {
+    width: 75rem;
+  }
+  .div__vending--flex {
+    width: 75rem;
+  }
+
+  .h2__road--vending {
+    margin-left: 0rem;
   }
 }
 

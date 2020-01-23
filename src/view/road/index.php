@@ -101,7 +101,7 @@
       <h2 class="white h2__road h2__road-2">Dag 102</h2>
     </div>
     <div class="container">
-      <p class="white p__road--text p__road">“Ik schrik wakker. Zoals ik bijna elke ochtend doe. Het is voor mij
+      <p class="white p__road--text p__road p__dream--intro">“Ik schrik wakker. Zoals ik bijna elke ochtend doe. Het is voor mij
         een ochtendritueel geworden om mijn nachtmerries op te schrijven. Waarom doe ik dit eigenlijk? Elk keer word ik
         herinnerd aan mijn eigen zwarte en donkere onderbewustzijn dat mijn nachtrust tot een hel maakt. Laat ik hier
         een einde aan maken. Vanaf morgen zal ik mijn nachtmerries niet meer beschrijven. Verder zal ik al mijn andere
@@ -112,7 +112,15 @@
     <div class="div__dreams--buttons">
     </div>
     <div class="div__dreams--flex">
-      <img src="./assets/img/img_road/nightmares.png" alt="">
+      <img srcset="./assets/img/img_road/nightmares_480.png 310w,
+    ./assets/img/img_road/nightmares_968.png 535w,
+    ./assets/img/img_road/nightmares_1280.png 663w,ç
+    ./assets/img/img_road/nightmares_1600.png 799w" sizes="(max-width: 480px) 300px,
+     (max-width: 768px) 550px,
+     (max-width: 968px) 550px,
+     (max-width: 1280px) 650px,
+     (max-width: 1600px) 800px,
+            800px" src="./assets/img/img_road/nightmares_1600.png" alt="dreams">
       <div class="div__dreams--textcontent container">
       </div>
     </div>
@@ -141,7 +149,7 @@
       </div>
     </div>
   </article>
-  <article class = "article__ending">
+  <article class="article__ending">
 
 
 
