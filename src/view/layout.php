@@ -23,15 +23,18 @@
     <div class = "container">
     <nav class = "road__nav">
       <ul class = "ul__nav--road">
-        <li class = "white li__nav--road">&lt; naar de shop</li>
-        <li class = "li__nav--road"><img src="./assets/img/img_road/logo.png" alt="logo"></li>
-        <li class = "white li__nav--road">andere broeken ></li>
+        <li class = "white li__nav--road li__nav--road-1">&lt; naar de shop</li>
+        <li class = "white li__nav--road"><img class = "img__back--svg" src="./assets/img/img_road/back.svg" alt="back button"></li>
+        <li class = "li__nav--road"><img class = "img__road--logo-b" src="./assets/img/img_road/logo.png" alt="logo"></li>
+        <li class = "li__nav--road"><img class = "img__road--logo-s" src="./assets/img/img_road/logo_480.png" alt="logo"></li>
+        <li class = "white li__nav--road"><img class = "img__book--svg" src="./assets/img/img_road/book.svg" alt="book button"></li>
+        <li class = "white li__nav--road">andere boeken></li>
       </ul>
     </nav>
     </div>
     <div class = "div__header--title">
-      <h1 class = "white p__road--bold h1__road">The Road</h1>
-      <p class = " white p__road--medium p__road--undertitle">Een digitale ervaring door HUMO</p>
+      <img class ="img__title--svg" src="./assets/img/img_road/title.svg" alt="title">
+      <p class = " white p__road--medium p__road--undertitle">Beleef het legendarische boek van Cormac McCarthy</p>
     </div>
     <div class='nav__scroll--button'></div>
     </div>

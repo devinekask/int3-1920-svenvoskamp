@@ -3,7 +3,7 @@
   <article>
     <div class="div__text--flex">
       <div class="container">
-      <h2 class="white h2__road">Dag 34</h2>
+        <h2 class="white h2__road">Dag 34</h2>
         <p class="white p__road--text p__road">“Het lijkt net alsof het buiten steeds donkerder wordt. Ik weet
           niet of dat komt doordat de zon zijn kracht
           verliest, doordat de mist dichter wordt of door mijn hoofd dat steeds minder licht wilt zien. De dagen zijn
@@ -16,7 +16,7 @@
           over het leven op deze kapotte aardbodem.”
         </p>
       </div>
-      <img class = "svg__donker" src="./assets/img/img_road/donker.svg" alt="donker">
+      <img class="svg__donker" src="./assets/img/img_road/donker.svg" alt="donker">
     </div>
     <div class="div__text--flex div__text--flex-2">
       <img class="img__lang" src="./assets/img/img_road/lang.svg" alt="lang">
@@ -62,7 +62,7 @@
       </div>
     </div>
     <div class="div__polaroid--svg">
-      <img class = "img__verwoest" src="./assets/img/img_road/verwoest.svg" alt="Verwoeste natuur">
+      <img class="img__verwoest" src="./assets/img/img_road/verwoest.svg" alt="Verwoeste natuur">
     </div>
     <div class="div__hover--svg">
       <img src="./assets/img/img_road/hover.svg" alt="hover">
@@ -99,7 +99,8 @@
       <h2 class="white h2__road h2__road-2">Dag 102</h2>
     </div>
     <div class="container">
-      <p class="white p__road--text p__road p__dream--intro">“Ik schrik wakker. Zoals ik bijna elke ochtend doe. Het is voor mij
+      <p class="white p__road--text p__road p__dream--intro">“Ik schrik wakker. Zoals ik bijna elke ochtend doe. Het is
+        voor mij
         een ochtendritueel geworden om mijn nachtmerries op te schrijven. Waarom doe ik dit eigenlijk? Elk keer word ik
         herinnerd aan mijn eigen zwarte en donkere onderbewustzijn dat mijn nachtrust tot een hel maakt. Laat ik hier
         een einde aan maken. Vanaf morgen zal ik mijn nachtmerries niet meer beschrijven. Verder zal ik al mijn andere
@@ -144,15 +145,48 @@
       <div class="div__vending--content">
       </div>
       <div class="div__vending--image">
-      <img class = "image__vending" srcset="./assets/img/img_road/vending_480.png 168w,
+        <img class="image__vending" srcset="./assets/img/img_road/vending_480.png 168w,
       ./assets/img/img_road/vending.png 241w" sizes="(max-width: 480px) 170px,
       300px" src="./assets/img/img_road/vending.png" alt="vening machine">
       </div>
     </div>
   </article>
   <article class="article__ending">
-
-
-
+    <div class="div__ending--flex">
+      <h2 class="white h2__road h2__road-2 h2__road--ending">Dag 371</h2>
+      <img srcset="
+      ./assets/img/img_road/final_480.png 287w,
+    ./assets/img/img_road/final_768.png 450w,
+    ./assets/img/img_road/final_968.png 769w,
+    ./assets/img/img_road/final_1280.png 888w,
+    ./assets/img/img_road/final.png 1027w,
+    " sizes="(max-width: 480px) 300px,
+     (max-width: 768px) 450px,
+     (max-width: 968px) 750px,
+     (max-width: 1280px) 900px,
+     (max-width: 1600px) 1050px,
+            1050px" src="./assets/img/img_road/final.png" alt="final">
+      <p class="white p__road--text p__road p__ending">
+        "Dus ja, lief dagboek, dat is zo'n beetje wat ik kwijt wilde. Dat de dagen hetzelfde zijn, dat de ouderdom van
+        mijn langzaam ook het leven uit mij lijkt te zuigen, dat de dagen donkerder en langer lijken te worden en dat ik
+        me steeds vaker afvraag hoe het zou zijn om dood te zijn. Die ene avond was het bijna gebeurd. Bijna, ja bijna.
+        Misschien hoor je dit liever niet, maar ik kan niet met zekerheid zeggen of ik nog een keer in je ga schrijven.
+        Je zal zelf uit moeten zullen vogelen wat die zin betekent. Ik denk dat ik morgen op zoek ga naar touw. Ik zal
+        vragen aan de man hoe je een strop maakt. Ik weet niet wat hij dan zal doen, maar dat maakt me verder ook niet
+        zoveel meer uit."
+      </p>
+      <img class="img__end" src="./assets/img/img_road/end.svg" alt="end">
+    </div>
+  </article>
+  <article class = "article__offer">
+  <div class = "div__ending--flex">
+  <h2 class="white h2__road h2__road-2 h2__road--offer">Interesse gewekt? </h2>
+  <p class="white p__road--text p__road p__offer">Koop het boek <span class = "span__offer">the road </span>met de lopende actie.  <span class = "span__offer">€8,- korting </span> met de kortingscode die je in de
+nieuwe humo van deze week kan vinden!
+</p>
+<form action="index.php?page=products">
+  <button class = "button__offer">Naar de shop</button>
+</form>
+</div>
   </article>
 </section>
