@@ -163,7 +163,7 @@
     ./assets/img/img_road/final_768.png 450w,
     ./assets/img/img_road/final_968.png 769w,
     ./assets/img/img_road/final_1280.png 888w,
-    ./assets/img/img_road/final.png 1027w,
+    ./assets/img/img_road/final.png 1027w
     " sizes="(max-width: 480px) 300px,
      (max-width: 768px) 450px,
      (max-width: 968px) 750px,
