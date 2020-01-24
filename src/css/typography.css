@@ -63,7 +63,8 @@ h2,
 }
 
 .p__spotlight--explained,
-.small {
+.small,
+.p__a {
   font-size: var(--fontSizeSmall);
 }
 
@@ -76,6 +77,7 @@ h2,
 .li__cart--nav {
   font-size: var(--fontSizeVerySmall);
 }
+
 .span__green {
   color: var(--mainGreen);
 }
@@ -83,6 +85,7 @@ h2,
 .li__cart--nav {
   color: #b0b0b0;
 }
+
 .red,
 .li__cart--active {
   color: var(--mainRed);
@@ -93,7 +96,7 @@ h2,
 .p__road--italic,
 .p__road--medium,
 .h2__road {
-  font-family: "Abhaya Libre", serif;
+  font-family: 'Abhaya Libre', serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -124,11 +127,12 @@ h2,
 }
 
 .p__road--text {
+  width: 55rem;
   line-height: 3rem;
 }
 
 .p__road--written {
-  font-family: "Rock Salt", cursive;
+  font-family: 'Rock Salt', cursive;
   font-size: var(--fontSizeVeryBig);
   line-height: 4.8rem;
   color: white;
@@ -140,13 +144,13 @@ h2,
   color: white;
   width: 14rem;
   height: 5rem;
-  padding-top: 0.6rem;
+  padding-top: .6rem;
   padding-left: 1.2rem;
   background-color: var(--mainRedRoad);
 }
 
-.p__road--text {
-  width: 55rem;
+.a__road {
+  font-family: Roboto, sans-serif;
 }
 
 .span__written {
@@ -154,3 +158,6 @@ h2,
   color: var(--mainOrangeRoad);
 }
 
+.p__a:hover {
+  text-decoration: underline;
+}

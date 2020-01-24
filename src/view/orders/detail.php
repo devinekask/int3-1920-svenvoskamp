@@ -85,9 +85,8 @@
             <div class="field--wrapper">
               <label class="field--wrapper__label" for="zip">
                 <span class="field--wrapper__label small p">Postcode:</span>
-                <input class="input__cart--zip" type="text" required id="number" placeholder="8500"
-                  name="zip" value="<?php if(!empty($_POST['zip'])){ echo $_POST['zip'];} ?>"
-                  class="error--active input" />
+                <input class="input__cart--zip" type="text" required id="number" placeholder="8500" name="zip"
+                  value="<?php if(!empty($_POST['zip'])){ echo $_POST['zip'];} ?>" class="error--active input" />
                 <span class="error">
                   <?php if (!empty($errors['zip'])) {echo $errors['zip'];}?>
                 </span>
@@ -134,8 +133,8 @@
                 <div class="field--wrapper">
                   <label class="field--wrapper__label" for="fnumber">
                     <span class="field--wrapper__label small p">Huisnummer:</span>
-                    <input class="input__cart--number" type="number"  id="fnumber" placeholder="10"
-                      name="fnumber" value="<?php if(!empty($_POST['fnumber'])){ echo $_POST['fnumber'];} ?>"
+                    <input class="input__cart--number" type="number" id="fnumber" placeholder="10" name="fnumber"
+                      value="<?php if(!empty($_POST['fnumber'])){ echo $_POST['fnumber'];} ?>"
                       class="error--active input" />
                     <span class="error">
                       <?php if (!empty($errors['fnumber'])) {echo $errors['fnumber'];}?>
@@ -144,62 +143,65 @@
                 </div>
               </div>
               <div class="field--wrapper">
-              <label class="field--wrapper__label" for="fzip">
-                <span class="field--wrapper__label small p">Postcode:</span>
-                <input class="input__cart--zip" type="text"  id="number" placeholder="8500"
-                  name="fzip" value="<?php if(!empty($_POST['fzip'])){ echo $_POST['fzip'];} ?>"
-                  class="error--active input" />
-                <span class="error">
-                  <?php if (!empty($errors['fzip'])) {echo $errors['fzip'];}?>
-                </span>
-              </label>
-            </div>
+                <label class="field--wrapper__label" for="fzip">
+                  <span class="field--wrapper__label small p">Postcode:</span>
+                  <input class="input__cart--zip" type="text" id="number" placeholder="8500" name="fzip"
+                    value="<?php if(!empty($_POST['fzip'])){ echo $_POST['fzip'];} ?>" class="error--active input" />
+                  <span class="error">
+                    <?php if (!empty($errors['fzip'])) {echo $errors['fzip'];}?>
+                  </span>
+                </label>
+              </div>
             </div>
           </div>
 
       </div>
       <div class="div__cartdetails--right">
         <p class="bold medium uppercase p__cart--title p__cartdetail--right">Jouw bestelling</p>
-        <div class = "div__cart--recipe div__details--recipe">
-      <div class = " div__recipe--top">
+        <div class="div__cart--recipe div__details--recipe">
+          <div class=" div__recipe--top">
 
-      <a class = "a--edit" href="index.php?page=cart"><img width= "20" height = "20"src="./assets/img/edit.svg" alt="edit icon"></a>
-        <?php foreach($orderItems as $orderItem): ?>
-        <div class="flex div__recipe--basic div__details--recipe-basic">
-          <p class = "small p__basic--text"><span class = "bold"><?php echo $orderItem['quantity'] .'x' . '</span>' . " " . $orderItem['name'];?>:</p>
-          <?php $ticketTotal = $orderItem['price'] * $orderItem['quantity']; ?>
-          <p class = "small p__basic--amount">&#8364;<?php echo $ticketTotal; ?></p>
-        </div>
-        <?php endforeach; ?>
-        <div class="flex div__recipe--discount div__details--recipe-discount">
+            <a class="a--edit" href="index.php?page=cart"><img width="20" height="20" src="./assets/img/edit.svg"
+                alt="edit icon"></a>
+            <?php foreach($orderItems as $orderItem): ?>
+            <div class="flex div__recipe--basic div__details--recipe-basic">
+              <p class="small p__basic--text"><span
+                  class="bold"><?php echo $orderItem['quantity'] .'x' . '</span>' . " " . $orderItem['name'];?>:</p>
+              <?php $ticketTotal = $orderItem['price'] * $orderItem['quantity']; ?>
+              <p class="small p__basic--amount">&#8364;<?php echo $ticketTotal; ?></p>
+            </div>
+            <?php endforeach; ?>
+            <div class="flex div__recipe--discount div__details--recipe-discount">
 
-          <p class = "small span__green p__recipe--text">Korting:</p>
-          <?php
+              <p class="small span__green p__recipe--text">Korting:</p>
+              <?php
           $discount = 0.00;
           if ($_SESSION['discount']){
           $discount = $discount = 8.00;
           $discount = (float)$discount;
           }
           ?>
-          <p class = "small span__green p__recipe--amount">- &#8364; <?php echo number_format((float)$discount, 2, '.', '');?></p>
-        </div>
-        <div class = "flex div__recipe--deliver ">
-          <p class = "small  p__total--text">Standaard levering (morgen):</p>
+              <p class="small span__green p__recipe--amount">- &#8364;
+                <?php echo number_format((float)$discount, 2, '.', '');?></p>
+            </div>
+            <div class="flex div__recipe--deliver ">
+              <p class="small  p__total--text">Standaard levering (morgen):</p>
 
-          <p class = "small uppercase   p__total--amount"><?php if ($delivery == 4.95){echo '&#8364;';}?><?php echo $delivery;?></p>
+              <p class="small uppercase   p__total--amount">
+                <?php if ($delivery == 4.95){echo '&#8364;';}?><?php echo $delivery;?></p>
+            </div>
+          </div>
+          <div class="flex div__recipe--bottom div__recipe--details-bottom">
+            <p class="medium uppercase bold p__bottom--text">Totaal:</p>
+            <p class="medium bold p__bottom--amount">&#8364;<?php echo $orderItem['amount'];?>
+            </p>
+            <input type="hidden" name="total" value="<?php echo $orderItem['amount'];?>">
+          </div>
         </div>
-      </div>
-      <div class = "flex div__recipe--bottom div__recipe--details-bottom">
-        <p class = "medium uppercase bold p__bottom--text">Totaal:</p>
-        <p class = "medium bold p__bottom--amount">&#8364;<?php echo $orderItem['amount'];?>
-        </p>
-        <input type="hidden" name="total" value="<?php echo $orderItem['amount'];?>">
       </div>
     </div>
-      </div>
-
-    </div>
-    <input type="submit" class="button__spotlight button__cart--details" value="Checkout">
+    <a class="p__a " href="index.php?page=cart">
+      &lt; terug</a> <input type="submit" class="button__spotlight button__cart--details" value="Checkout">
         </form>
   </div>
 </section>

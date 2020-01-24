@@ -274,6 +274,7 @@ class OrdersController extends Controller {
       }
     }
       public function finished(){
+        $this->set('title', "Bestelling Geslaagd");
         $_SESSION['tocart'] = false;
         if(!$_SESSION['payment']){
           header('Location: index.php?page=home');

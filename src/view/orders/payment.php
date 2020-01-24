@@ -4,7 +4,6 @@
   <li class="li__cart--nav li__cart--active">3 Checkout</li>
 </ul>
 <hr class="grey__line grey__line--cart">
-
 <section class="section__cart--detail">
   <div class="container__dashed section__cart--main">
     <div class="div__h2--flex">
@@ -77,6 +76,7 @@
         </div>
       </div>
     </div>
+    <a class = "p__a " href="index.php?page=cart-detail">&lt; terug</a>
     <input type="submit" class="button__spotlight button__cart--details" value="Naar betaalsysteem">
     </form>
   </div>

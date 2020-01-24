@@ -9,11 +9,10 @@
       <div class="spotlight__explained">
         <p class = "p__spotlight--explained">*Bij aankoop van een HUMO magazine van deze week ontvangt u een kortingscode die is te
           gebruiken op de 10 actieboeken. </p>
-        <button class = "button__spotlight">&rarr; Ontdek "The Road"</button>
+            <a href = "index.php?page=road" class = "button__spotlight a__button--spotlight">&rarr; Ontdek "The Road"</a>
       </div>
   </div>
 </section>
-
 <section class = "section__filter">
   <hr class = "grey__line">
     <h2 class = "hidden">Filter</h2>
@@ -46,7 +45,6 @@
       </div>
   <hr class = "grey__line grey__line--2">
 </section>
-
 <section class = " container container__dashed section__products">
   <h2 class = "h2__spotlight h2__products"><span class = "h2__background--red h2__background--padding">Producten</span></h2>
     <ul class = "ul__products">

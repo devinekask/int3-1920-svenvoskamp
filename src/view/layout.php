@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width = device-width">
@@ -8,9 +7,9 @@
   <link rel="stylesheet" href="https://use.typekit.net/cov4duu.css">
   <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <?php echo $css;?>
 </head>
-
 <?php if ($title == "The Road"): ?>
   <body>
   <header class = "header--road">
@@ -39,8 +38,6 @@
     <div class='nav__scroll--button'></div>
     </div>
   </header>
-
-
 <?php else: ?>
 <body>
   <header>
@@ -66,7 +63,7 @@
           <li class="li__nav--main">Actua</li>
           <li class="li__nav--main">Humor</li>
           <li class="li__nav--main">TV/Film</li>
-          <li><img class="img__nav--main" width="149" height="69" src="../assets/img/logo.svg" alt="Humo logo"></li>
+          <li><a href="index.php"><img class="img__nav--main" width="149" height="69" src="../assets/img/logo.svg" alt="Humo logo"></a></li>
           <li class="li__nav--main">Muziek</li>
           <li class="li__nav--main">Boeken</li>
           <li class="li__nav--main"><span class="span__main--background"><a
@@ -97,7 +94,7 @@
           <li class="li__nav--main">Home</li>
           <li class="li__nav--main">Actua</li>
           <li class="li__nav--main">Humor</li>
-          <li><img class="img__nav--main" width="149" height="69" src="../assets/img/logo.svg" alt="Humo logo"></li>
+          <li><a href="index.php"><img class="img__nav--main" width="149" height="69" src="../assets/img/logo.svg" alt="Humo logo"></a></li>
           <li class="li__nav--main">Boeken</li>
           <li class="li__nav--main"><span class="span__main--background">Shop</span></li>
         </ul>
@@ -110,7 +107,7 @@
           <img class="img__mobile--left" width="24" height="24" src="../assets/img/search.svg" alt="Search Icon">
         </div>
         <div class="nav__top--mid">
-          <img class="img__mobile--logo" width="128" height="46" src="./assets/img/logosmall.svg" alt="Small logo">
+          <a href="index.php"><img class="img__mobile--logo" width="128" height="46" src="./assets/img/logosmall.svg" alt="Small logo"></a>
         </div>
         <div class="nav__top--right">
           <img class="img__mobile--right" width="24" height="24" src="../assets/img/user.svg" alt="Hamburger Icon">
@@ -121,7 +118,6 @@
           </ul>
         </div>
       </div>
-
     </nav>
   </header>
   <?php if (!empty($_SESSION['info'])): ?>
@@ -130,7 +126,6 @@
   <?php if (!empty($_SESSION['error'])): ?>
   <div class="session--error"><?php echo $_SESSION['error']; ?></div>
   <?php endif; ?>
-
   <?php endif; ?>
   <main>
     <?php echo $content;?>
@@ -139,5 +134,4 @@
   </footer>
   <?php echo $js; ?>
 </body>
-
 </html>

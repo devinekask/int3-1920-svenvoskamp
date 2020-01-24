@@ -4,6 +4,4 @@
     <form action="index.php">
       <button class = "button__spotlight button__emptycart" type="submit">Terug naar de shop</button>
     </form>
-    <img class = "img__emptycart img__finished" src="./assets/img/finished.png" alt="Suske en wiske renned">
-
   </div>

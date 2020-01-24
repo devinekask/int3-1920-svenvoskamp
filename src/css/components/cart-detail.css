@@ -1,5 +1,5 @@
 .field--wrapper__label {
-  padding-bottom: 0.4rem;
+  padding-bottom: .4rem;
   display: flex;
   flex-direction: column;
 }
@@ -22,9 +22,9 @@
 .field--wrapper__label > input {
   width: 20rem;
   height: 3rem;
-  border: 0.1rem solid black;
+  border: .1rem solid black;
   font-size: var(--fontSizeVerySmall);
-  padding-left: 0.5rem;
+  padding-left: .5rem;
 }
 
 .field--wrapper__fadress {
@@ -36,12 +36,13 @@
 }
 
 .input__cart--toggle {
+
   -webkit-appearance: none;
   background-color: white;
   border: 1px solid black;
   height: 1rem;
   width: 1rem;
-  margin-bottom: 0.1rem;
+  margin-bottom: .1rem;
 }
 
 .label__cart--toggle {
@@ -52,7 +53,7 @@
   background-color: var(--mainRed);
 }
 
-input[type="checkbox"]:checked + label + .field--wrapper__fadress {
+input[type='checkbox']:checked + label + .field--wrapper__fadress {
   display: block;
 }
 
@@ -78,7 +79,7 @@ input[type="checkbox"]:checked + label + .field--wrapper__fadress {
 .div__recipe--details-bottom {
   border-top: none;
   padding-bottom: 2rem;
-  padding-top: 0rem;
+  padding-top: 0;
 }
 
 .div__details--recipe-discount {
@@ -97,7 +98,7 @@ input[type="checkbox"]:checked + label + .field--wrapper__fadress {
 .error {
   font-size: var(--fontSizeTiny);
   color: var(--mainRed);
-  margin-top: 0.5rem;
+  margin-top: .5rem;
 }
 
 .p__cartdetail--right {
@@ -110,12 +111,15 @@ input[type="checkbox"]:checked + label + .field--wrapper__fadress {
 }
 
 @media (--tablet) {
+
   .div__cartdetails {
     flex-direction: column;
   }
+
   .field--wrapper__adress {
     width: 30rem;
   }
+
   .p__recipe--text,
   .p__basic--text,
   .p__total--text,
@@ -124,7 +128,7 @@ input[type="checkbox"]:checked + label + .field--wrapper__fadress {
   }
 
   .div__cart--recipe {
-    margin-left: 0rem;
+    margin-left: 0;
     width: 48rem;
   }
 
@@ -134,8 +138,9 @@ input[type="checkbox"]:checked + label + .field--wrapper__fadress {
   .p__bottom--amount {
     margin-right: 2rem;
   }
+
   .button__cart--details {
-    padding: 0.8rem 8rem;
+    padding: .8rem 8rem;
   }
 
   .p__cartdetail--right {
@@ -143,6 +148,7 @@ input[type="checkbox"]:checked + label + .field--wrapper__fadress {
   }
 
   @media (--mobile) {
+
     .p__basic--amount,
     .p__recipe--amount,
     .p__total--amount,

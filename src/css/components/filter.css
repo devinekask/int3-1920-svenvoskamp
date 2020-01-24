@@ -1,5 +1,5 @@
 .grey__line {
-  border: solid 0.2rem var(--mainGrey);
+  border: solid .2rem var(--mainGrey);
 }
 
 .grey__line--2 {
@@ -17,6 +17,7 @@
 }
 
 @media (--mobile) {
+
   .checkbox__wrap {
     flex-direction: column;
   }
@@ -28,7 +29,8 @@
 }
 
 .p__checkbox {
-  margin-left: 0.5rem;
+  margin-left: .5rem;
+  margin-top: .1rem;
 }
 
 .submit__wrap {
@@ -38,11 +40,12 @@
 .button__filter {
   margin-right: 3.5rem;
   background-color: var(--mainRed);
-  padding: 0.8rem 3rem;
+  padding: .8rem 3rem;
   color: white;
 }
 
 .input__checkbox {
+
   -webkit-appearance: none;
   background-color: white;
   border: 1px solid black;
@@ -52,8 +55,4 @@
 
 .input__checkbox:checked {
   background-color: var(--mainRed);
-}
-
-.p__checkbox {
-  margin-top: 0.1rem;
 }

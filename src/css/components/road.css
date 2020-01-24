@@ -12,7 +12,7 @@
 }
 
 .li__nav--road {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   z-index: 1;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .nav__scroll--button,
-.nav__scroll--button:before {
+.nav__scroll--button::before {
   position: absolute;
   left: 50%;
 }
@@ -34,26 +34,29 @@
   margin-left: -2rem;
   top: 50%;
   margin-top: 30rem;
-  box-shadow: inset 0 0 0 0.1rem #fff;
+  box-shadow: inset 0 0 0 .1rem white;
   border-radius: 2.5rem;
 }
-.nav__scroll--button:before {
-  content: "";
-  width: 0.8rem;
-  height: 0.8rem;
-  background: #fff;
-  margin-left: -0.4rem;
-  top: 0.8rem;
-  border-radius: 0.4rem;
+
+.nav__scroll--button::before {
+  content: '';
+  width: .8rem;
+  height: .8rem;
+  background: white;
+  margin-left: -.4rem;
+  top: .8rem;
+  border-radius: .4rem;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-name: scroll;
 }
 
 @keyframes scroll {
+
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     transform: translateY(46px);
@@ -96,10 +99,10 @@
 
 .img__effect {
   position: absolute;
-  top: calc(-1 * 0.5rem);
+  top: calc(-1 * .5rem);
   left: calc(-1 * 1rem);
   width: calc(100% + 1rem * 2);
-  height: calc(100% + 0.5rem * 2);
+  height: calc(100% + .5rem * 2);
   background: url(../../assets/img/img_road/header_1600.png) no-repeat 50% 0;
   background-color: transparent;
   background-size: cover;
@@ -108,43 +111,41 @@
 }
 
 .img__effect:nth-child(n + 2) {
-  opacity: 0;
-}
-
-.img__effect:nth-child(n + 2) {
   animation-duration: 4s;
   animation-delay: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  opacity: 0;
 }
 
 .img__effect:nth-child(2) {
   background-color: none;
   background-blend-mode: none;
-  animation-name: glitch-anim-1;
+  animation-name: effect-1;
 }
 
 .img__effect:nth-child(3) {
   background-color: none;
   background-blend-mode: none;
-  animation-name: glitch-anim-2;
+  animation-name: effect-2;
 }
 
 .img__effect:nth-child(4) {
   background-color: transaparent;
   background-blend-mode: none;
-  animation-name: glitch-anim-3;
+  animation-name: effect-3;
 }
 
 .img__effect:nth-child(5) {
   background-color: black;
   background-blend-mode: luminosity;
-  animation: glitch-anim-flash 1.5s steps(1, end) infinite;
+  animation: effect-flash 1.5s steps(1, end) infinite;
 }
 
 /* Animations */
 
-@keyframes glitch-anim-1 {
+@keyframes effect-1 {
+
   0% {
     opacity: 1;
     transform: translate3d(1rem, 0, 0);
@@ -216,7 +217,8 @@
   }
 }
 
-@keyframes glitch-anim-2 {
+@keyframes effect-2 {
+
   0% {
     -webkit-clip-path: polygon(2% 0, 5% 0, 5% 100%, 2% 100%);
     clip-path: polygon(2% 0, 100% 0, 5% 100%, 2% 100%);
@@ -273,10 +275,11 @@
   }
 }
 
-@keyframes glitch-anim-3 {
+@keyframes effect-3 {
+
   0% {
     opacity: 1;
-    transform: translate3d(0, calc(-1 * 0.5rem), 0) scale3d(-1, -1, 1);
+    transform: translate3d(0, calc(-1 * .5rem), 0) scale3d(-1, -1, 1);
     -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
     clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
   }
@@ -373,7 +376,7 @@
 
   21.9% {
     opacity: 1;
-    transform: translate3d(0, calc(-1 * 0.5rem), 0) scale3d(-1, -1, 1);
+    transform: translate3d(0, calc(-1 * .5rem), 0) scale3d(-1, -1, 1);
   }
 
   22%,
@@ -385,10 +388,11 @@
   }
 }
 
-@keyframes glitch-anim-flash {
+@keyframes effect-flash {
+
   0%,
   5% {
-    opacity: 0.2;
+    opacity: .2;
     transform: translate3d(3rem, 3rem, 0);
   }
 
@@ -409,13 +413,13 @@
   overflow: hidden;
 }
 
-.section--road:after {
+.section--road::after {
   animation: grain 8s steps(10) infinite;
   background-image: url(https://previews.123rf.com/images/maximkostenko/maximkostenko1602/maximkostenko160200071/53576792-grain-texture-overlay-background-for-your-desig-dusty-overlay-texture.jpg);
-  content: "";
+  content: '';
   height: 300%;
   left: -50%;
-  opacity: 0.03;
+  opacity: .03;
   position: fixed;
   top: -110%;
   width: 300%;
@@ -423,6 +427,7 @@
 }
 
 @keyframes grain {
+
   0%,
   100% {
     transform: translate(0, 0);
@@ -541,7 +546,7 @@
   position: absolute;
   margin-top: 4rem;
   left: 37vw;
-  opacity: 0.4;
+  opacity: .4;
 }
 
 .div__polaroid--textcontent1,
@@ -614,6 +619,7 @@
 }
 
 @keyframes fadein {
+
   from {
     opacity: 0;
   }
@@ -625,6 +631,7 @@
 
 /* Firefox < 16 */
 @-moz-keyframes fadein {
+
   from {
     opacity: 0;
   }
@@ -636,6 +643,7 @@
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
+
   from {
     opacity: 0;
   }
@@ -647,6 +655,7 @@
 
 /* Internet Explorer */
 @-ms-keyframes fadein {
+
   from {
     opacity: 0;
   }
@@ -658,6 +667,7 @@
 
 /* Opera < 12.1 */
 @-o-keyframes fadein {
+
   from {
     opacity: 0;
   }
@@ -770,10 +780,11 @@
 }
 
 .shake {
-  animation: shake 0.5s infinite;
+  animation: shake .5s infinite;
 }
 
 @keyframes shake {
+
   0% {
     transform: rotate(0deg);
   }
@@ -801,21 +812,18 @@
 
 .image__can {
   margin-right: 20rem;
+  margin-bottom: 5rem;
 }
 
 .div__vending--content {
   margin-left: 20rem;
 }
 
-.image__can {
-  margin-bottom: 5rem;
-}
-
 .img__klik--svg {
   position: absolute;
   margin-top: 4rem;
   left: 40vw;
-  opacity: 0.4;
+  opacity: .4;
 }
 
 .img__klik--svg-2 {
@@ -831,13 +839,11 @@
 
 .p__ending {
   text-align: center;
+  margin-top: 12rem;
+  width: 65rem;
 }
 
 .article__ending {
-  margin-top: 12rem;
-}
-
-.p__ending {
   margin-top: 12rem;
 }
 
@@ -852,6 +858,7 @@
 .h2__road--offer {
   width: 36rem;
 }
+
 .p__offer {
   text-align: center;
   font-size: var(--fontSizeVeryBig);
@@ -874,21 +881,20 @@
   color: white;
   text-transform: uppercase;
   background-color: var(--mainOrangeRoad);
-  transition: opacity 0.5s;
+  transition: opacity .5s;
 }
 
 .button__offer:hover {
-  opacity: 0.4;
+  opacity: .4;
 }
 
-.p__ending {
-  width: 65rem;
-}
 @media (--imac) {
+
   .img__effect {
     background: url(../../assets/img/img_road/header_1280.png) no-repeat 50% 0;
     background-size: cover;
   }
+
   .img__title--svg {
     width: 70rem;
     height: 12.6rem;
@@ -908,7 +914,7 @@
   }
 
   .button__dream:nth-child(1) {
-    margin-top: 0rem;
+    margin-top: 0;
   }
 
   .button__dream:nth-child(2) {
@@ -922,7 +928,7 @@
   }
 
   .div__dreams--textcontent {
-    width: 30rem;
+    width: 75rem;
   }
 
   .img__klik--svg-2 {
@@ -964,7 +970,7 @@
   }
 
   .polaroid__flex--2 {
-    margin-top: 0rem;
+    margin-top: 0;
   }
 
   .div__polaroid--svg {
@@ -984,26 +990,26 @@
     flex-direction: column;
   }
 
-  .div__dreams--textcontent {
-    width: 75rem;
-  }
-
   .div__vending--flex {
     width: 75rem;
   }
 
   .h2__road--vending {
-    margin-left: 0rem;
+
+    margin-left: 0;
   }
+
   .p__ending {
     width: 65rem;
   }
+
   .p__offer {
     width: 70rem;
   }
 }
 
 @media (--tablet) {
+
   .img__effect {
     background: url(../../assets/img/img_road/header_968.png) no-repeat 50% 0;
     background-size: cover;
@@ -1030,7 +1036,7 @@
 
   .p__road--text-right {
     margin-right: 3rem;
-    margin-left: 0rem;
+    margin-left: 0;
   }
 
   .div__hover--svg {
@@ -1083,7 +1089,7 @@
   .p__vending,
   .h2__road--dream,
   .p__dreams {
-    margin-left: 0rem;
+    margin-left: 0;
     margin-right: 3rem;
   }
 
@@ -1109,7 +1115,7 @@
   }
 
   .div__vending--content {
-    margin-left: 0rem;
+    margin-left: 0;
   }
 
   .p__road--can {
@@ -1119,21 +1125,25 @@
   .img__klik--svg-2 {
     left: 37vw;
   }
+
   .p__ending {
     width: 65rem;
     margin-left: 3rem;
     margin-right: 3rem;
   }
+
   .p__offer {
     margin-right: 3rem;
   }
 }
 
 @media (--tabletmini) {
+
   .img__effect {
     background: url(../../assets/img/img_road/header_768.png) no-repeat 50% 0;
     background-size: cover;
   }
+
   .li__nav--road:nth-child(3),
   .li__nav--road:nth-child(1),
   .li__nav--road:nth-child(6) {
@@ -1156,6 +1166,7 @@
     width: 3.2rem;
     height: 3.2rem;
   }
+
   .img__title--svg {
     width: 40rem;
     height: 7.4rem;
@@ -1207,7 +1218,7 @@
   }
 
   .p__polaroid--2 {
-    margin-right: -0.2rem;
+    margin-right: -.2rem;
   }
 
   .p__polaroid--1,
@@ -1219,6 +1230,7 @@
   .button__dream {
     width: 3rem;
     height: 3rem;
+    padding: 1.5rem;
   }
 
   .button__dream:nth-child(3) {
@@ -1250,7 +1262,7 @@
   }
 
   .img__klik--svg {
-    margin-top: 0rem;
+    margin-top: 0;
   }
 
   .div__vending--content--flex {
@@ -1267,9 +1279,6 @@
     margin-top: 35rem;
   }
 
-  .button__dream {
-    padding: 1.5rem;
-  }
   .div__vending--content {
     margin-right: 3rem;
   }
@@ -1290,6 +1299,7 @@
 }
 
 @media (--mobile) {
+
   .img__effect {
     background: url(../../assets/img/img_road/header_480.png) no-repeat 50% 0;
     background-size: cover;
@@ -1331,7 +1341,7 @@
   }
 
   .polaroid__flex--3 {
-    margin-left: 0rem;
+    margin-left: 0;
   }
 
   .img__verwoest {
@@ -1399,7 +1409,7 @@
   }
 
   .button__dream:nth-child(3) {
-    margin-left: 0rem;
+    margin-left: 0;
     margin-top: -18rem;
   }
 
@@ -1407,23 +1417,28 @@
     margin-top: -13rem;
     margin-right: 3rem;
   }
+
   .p__ending {
     width: 28rem;
     margin-right: 2rem;
   }
+
   .p__offer {
     margin-right: 1rem;
     margin-left: 1rem;
   }
+
   .button__offer {
     padding: 2rem 6rem;
   }
+
   .h2__road--offer {
     font-size: 2.6rem;
     width: 28rem;
     height: 4rem;
-    margin-left: 0rem;
+    margin-left: 0;
   }
+
   .nav__scroll--button {
     margin-top: 20rem;
   }

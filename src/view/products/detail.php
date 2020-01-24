@@ -1,9 +1,7 @@
 <hr class = "grey__line grey__line--nav">
 <p class = "container tiny p__product--back"><a class = "tiny" href="index.php?page=products">&lt; terug naar shop</a></p>
 <section class = "container section__product--detail">
-
   <h2 class = "hidden">Product Detail</h2>
-
   <div class = "div__product--title">
     <p class = "uppercase bold big p__product--title"><?php echo $product['title'];?></p>
     <?php if($product['id'] >= 1 && $product['id'] <= 10): ?>
@@ -13,7 +11,6 @@
   </div>
   <div class = "div__product--info">
     <form method="post" action="index.php?page=cart">
-
       <?php if(($product['id'] == '14') || $product['id'] == '13' || $product['id'] == '19') :?>
       <div class = "div__product--input div__product--input-active">
         <?php else: ?>
@@ -67,13 +64,11 @@
     </form>
   </div>
 </section>
-
 <div class = "container section__flex">
   <section class = "container container__dashed section__product--info">
     <h2 class = "h2__product__info h2__spotlight h2__products"><span class = "h2__background--red h2__background--padding">Productinformatie</span></h2>
     <p class = "p__product--info"><?php echo $product['information'];?></p>
   </section>
-
   <section class = "container container__dashed section__product--specs">
     <h2 class = "h2__product--specs h2__spotlight h2__products"><span class = "h2__background--red h2__background--padding">Specificaties</span></h2>
     <ul class = "ul__product--specs">
@@ -83,7 +78,6 @@
     </ul>
   </section>
 </div>
-
 <section class = " container container__dashed section__products">
   <h2 class = "h2__spotlight h2__products"><span class = "h2__background--red h2__background--padding">Relevante Producten</span></h2>
     <ul class = "ul__products">

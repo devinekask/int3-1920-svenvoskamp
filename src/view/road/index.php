@@ -169,13 +169,13 @@
      (max-width: 968px) 750px,
      (max-width: 1280px) 900px,
      (max-width: 1600px) 1050px,
-            1050px" src="./assets/img/img_road/final.png" alt="final">
+            1050px" src="./assets/img/img_road/final.png" alt="final"/>
       <p class="white p__road--text p__road p__ending">
         Mijn vader had dus gelijk. We werden achtervolgd. Alles is gestolen, behalve mijn dagboek en foto's.
         Dus ja, lief dagboek, dat is zo'n beetje wat ik kwijt wilde. Dat de dagen hetzelfde zijn, dat de ouderdom van
         mijn vader langzaam ook het leven uit mij lijkt te zuigen, dat de dagen donkerder en langer lijken te worden en
         dat ik
-        me steeds vaker afvraag hoe het zou zijn om dood te zijn. Zeker na wat er vannacht gebeurd is
+        me steeds vaker afvraag hoe het zou zijn om dood te zijn. Zeker na wat er vannacht gebeurd is.
         Misschien hoor je dit liever niet, maar ik kan niet met zekerheid zeggen of ik nog een keer in je ga schrijven.
         Je zal zelf uit moeten zullen vogelen wat die zin betekent.<span class="span__written"> Ik denk dat ik morgen op
           zoek ga naar touw. </span> Ik zal
@@ -190,7 +190,7 @@
       <h2 class="white h2__road h2__road-2 h2__road--offer">Interesse gewekt? </h2>
       <p class="white p__road--text p__road p__offer">Koop het boek <span class="span__offer">the road </span>met de
         lopende actie. <span class="span__offer">€8,- korting </span> met de kortingscode die je in de
-        nieuwe humo van deze week kan vinden!
+        nieuwe HUMO van deze week kan vinden!
       </p>
       <form action="index.php?page=products">
         <button class="button__offer">Naar de shop</button>
