@@ -7,6 +7,10 @@
   z-index: 1;
 }
 
+.a__road:hover {
+  text-decoration: underline;
+}
+
 .li__nav--road {
   font-family: Roboto;
   z-index: 1;
@@ -402,6 +406,7 @@
 .section--road {
   background-color: black;
   padding-top: 12rem;
+  overflow: hidden;
 }
 
 .section--road:after {
@@ -701,6 +706,7 @@
   width: 5rem;
   border-radius: 50%;
   background-color: var(--mainOrangeRoad);
+  cursor: pointer;
 }
 
 .div__dreams--buttons {
@@ -760,6 +766,7 @@
 .image__vending {
   margin-right: 4rem;
   margin-top: -4rem;
+  cursor: pointer;
 }
 
 .shake {
@@ -1080,6 +1087,10 @@
     margin-right: 3rem;
   }
 
+  .h2__road--dream {
+    width: 24rem;
+  }
+
   .button__dream:nth-child(1) {
     margin-top: -3rem;
   }
@@ -1211,8 +1222,8 @@
   }
 
   .button__dream:nth-child(3) {
-    margin-right: 41rem;
-    margin-top: -15rem;
+    margin-left: 5rem;
+    margin-top: -16rem;
   }
 
   .button__dream:nth-child(1) {
@@ -1248,6 +1259,17 @@
     margin-top: -8rem;
   }
 
+  .div__dreams--buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+    position: absolute;
+    margin-top: 35rem;
+  }
+
+  .button__dream {
+    padding: 1.5rem;
+  }
   .div__vending--content {
     margin-right: 3rem;
   }
@@ -1372,8 +1394,12 @@
     width: 28rem;
   }
 
+  .div__dreams--buttons {
+    width: 10rem;
+  }
+
   .button__dream:nth-child(3) {
-    margin-right: 46rem;
+    margin-left: 0rem;
     margin-top: -18rem;
   }
 
@@ -1394,7 +1420,7 @@
   }
   .h2__road--offer {
     font-size: 2.6rem;
-    width: 26rem;
+    width: 28rem;
     height: 4rem;
     margin-left: 0rem;
   }

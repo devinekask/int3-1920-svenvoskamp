@@ -5,7 +5,7 @@
     },
     {
       dream: `#Droom 52`,
-      text: `“Mijn vader is in slaap gevallen. Na een paar lange dagen kan het ook niet anders dat hij moe is. Ik kan niet in slaap komen. Langzaam hoor ik een ritselend geluid door de bomen. Ik ga mijn tent uit om te kijken wat er is. Ik word bij mijn keel gegrepen door een onbekend persoon. Hij wilt al ons voedsel hebben. Ik probeer me los te rukken en op dat moment wil hij mijn keel doorsnijden. Ik schrik wakker.”`
+      text: `“Mijn vader is in slaap gevallen. Na een paar lange dagen kan het ook niet anders dan dat hij moe is. Ik kan niet in slaap komen. Langzaam hoor ik een ritselend geluid door de bomen. Ik ga mijn tent uit om te kijken wat er is. Ik word bij mijn keel gegrepen door een onbekend persoon. Hij wilt al ons voedsel hebben. Ik probeer me los te rukken en op dat moment wil hij mijn keel doorsnijden. Ik schrik wakker.”`
     },
     {
       dream: `#Droom 87`,
@@ -16,7 +16,8 @@
   const cans = [{
       id: 1,
       can: `Cola`,
-      text: `“Ik loop rond door het bos. Ik ben mijn vader kwijt. Hij zij mij nooit alleen laten. Hij was op zoek naar voedsel en zou binnen twee minuten terug zijn. Ik schreeuw de naam van mijn vader, maar het enige wat ik hoor is mijn eigen echo. Ik begin te rennen. Ik moet mijn vader vinden. Ik hoor een geweerschot. Ik volg het geluid en zie dat mijn vader op de grond ligt. Ik schrik wakker.”`,
+      text: `“Mijn vader overhandigt mij het blike cola. Ik kijk ernaar. Met mijn hand haal ik het stof er vanaf. Mijn vader vertelt over vroeger. Hoe hij kon genieten van een blikje cola na een lange dag werken. Ik vraag of hij een slokje wilt, maar hij weigert. Hij zegt <span
+      class="span__written">"geniet ervan"</span>,  je zult het waarschijnlijk nooit meer drinken.”`,
       img: `./assets/img/img_road/cola_1280.png 221w,
       ./assets/img/img_road/cola.png 388w"
        sizes="(max-width: 1280px) 250px,
@@ -25,7 +26,8 @@
     {
       id: 2,
       can: `Orange`,
-      text: `“Mijn vader is in slaap gevallen. Na een paar lange dagen kan het ook niet anders dat hij moe is. Ik kan niet in slaap komen. Langzaam hoor ik een ritselend geluid door de bomen. Ik ga mijn tent uit om te kijken wat er is. Ik word bij mijn keel gegrepen door een onbekend persoon. Hij wilt al ons voedsel hebben. Ik probeer me los te rukken en op dat moment wil hij mijn keel doorsnijden. Ik schrik wakker.”`,
+      text: `“Mijn vader probeert het oranje blikje uit de machine te halen. <span
+      class="span__written">"Dit was de favoriet van je moeder"</span> zegt hij. Het blikje valt uit de machine en ook deze geeft hij aan mij. Je hebt de suikers nodig, bewaar hem voor later”`,
       img: `./assets/img/img_road/orange_1280.png 221w,
       ./assets/img/img_road/orange.png 388w"
        sizes="(max-width: 1280px) 250px,
@@ -34,7 +36,7 @@
     {
       id: 3,
       can: `Lemon`,
-      text: `“Het enige wat ik zie is zwarte rook. Ik kan niet ademhalen en ik begin in paniek te raken. Alles om mij heen is zwart. Alles, maar dan ook alles. Op het moment dat ik om hulp wil roepen voel ik een verstikkend gevoel in mijn keel. Ik kan nergens heen. Dit is het moment dat ik heen zal gaan. Op het moment dat ik de warmte van het vuur op mijn huid kan voelen, schrik ik wakker.”`,
+      text: `“Om wat voorraad te hebben, probeert mijn vader ook het laatste blikje uit de automaat te halen. Het blikje heeft een lelijke grijze kleur. Ook mijn vader kent dit blikje niet. Met al zijn kracht krijgt hij het laatste blikje uit de automaat. Hij wilt snel verder gaan, want hij heeft het gevoel dat we  <span class="span__written">achtervolgd </span>worden.”`,
       img: `./assets/img/img_road/lemon_1280.png 221w,
       ./assets/img/img_road/lemon.png 388w"
        sizes="(max-width: 1280px) 250px,

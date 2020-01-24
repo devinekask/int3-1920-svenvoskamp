@@ -23,12 +23,12 @@
     <div class = "container">
     <nav class = "road__nav">
       <ul class = "ul__nav--road">
-        <li class = "white li__nav--road li__nav--road-1">&lt; naar de shop</li>
-        <li class = "white li__nav--road"><img class = "img__back--svg" src="./assets/img/img_road/back.svg" alt="back button"></li>
+        <li class = "white li__nav--road li__nav--road-1"><a class ="a__road" href="index.php?page=products">&lt; naar de shop</a></li>
+        <li class = "white li__nav--road"><a class ="a__road" href="index.php?page=products"><img class = "img__back--svg" src="./assets/img/img_road/back.svg" alt="back button"></a></li>
         <li class = "li__nav--road"><img class = "img__road--logo-b" src="./assets/img/img_road/logo.png" alt="logo"></li>
         <li class = "li__nav--road"><img class = "img__road--logo-s" src="./assets/img/img_road/logo_480.png" alt="logo"></li>
-        <li class = "white li__nav--road"><img class = "img__book--svg" src="./assets/img/img_road/book.svg" alt="book button"></li>
-        <li class = "white li__nav--road">andere boeken></li>
+        <li class = "white li__nav--road"><a class = "a__road" href="index.php?action=&page=home&type%5B%5D=1"><img class = "img__book--svg" src="./assets/img/img_road/book.svg" alt="book button"></a></li>
+        <li class = "white li__nav--road"><a class = "a__road" href="index.php?action=&page=home&type%5B%5D=1">andere boeken></a></li>
       </ul>
     </nav>
     </div>
