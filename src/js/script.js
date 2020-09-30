@@ -80,7 +80,6 @@
       $cartbutton.addEventListener('click', handleSubmit);
     }
 
-
     const $checkboxes = document.querySelectorAll('input[type=checkbox]');
     console.log($checkboxes);
     $checkboxes.forEach(checkbox => {

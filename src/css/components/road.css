@@ -16,6 +16,10 @@
   z-index: 1;
 }
 
+.img__road--logo-s {
+  margin-left: 7.3rem;
+}
+
 .img__back--svg,
 .img__book--svg,
 .img__road--logo-s {
@@ -1138,6 +1142,10 @@
 }
 
 @media (--tabletmini) {
+
+  .img__road--logo-s {
+    margin-left: 0rem;
+  }
 
   .img__effect {
     background: url(../../assets/img/img_road/header_768.png) no-repeat 50% 0;
